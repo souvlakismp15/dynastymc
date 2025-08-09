@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+<body>
+    <script>
+        ! function() {
+            function t(t) {
+                window.parent.postMessage("string" == typeof t ? t : JSON.stringify(t), "*")
+            }
+
+            function e(t, e, a) {
+                t.addEventListener ? t.addEventListener(e, a, !1) : t.attachEvent && t.attachEvent("on" + e, a)
+            }
+            e(window, "message", function(e) {
+                var a = !0;
+                try {
+                    window.localStorage
+                } catch (n) {
+                    a = !1
+                }
+                if ("string" == typeof e.data) try {
+                    var o = JSON.parse(e.data);
+                    "getItem" === o.command ? t({
+                        command: o.command,
+                        response: a ? localStorage.getItem(o.key) : void 0
+                    }) : "setItem" === o.command && (o.key && o.value && a && localStorage.setItem(o.key, o.value), t({
+                        command: o.command,
+                        response: !0
+                    }))
+                } catch (n) {}
+            })
+        }();
+    </script>
+</body>
+
+</html>
