@@ -1,0 +1,2643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>EuropeMC | Welcome</title>
+
+    <link href="/templates/209/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="/template-assets/main.css?updated=5c2de85f9dfeaa8a41cfffc6aca2db17a3dd7f61ce2ae2074d20acc682c1d568" rel="stylesheet">
+    <link rel="shortcut icon" href="https://dunb17ur4ymx4.cloudfront.net/webstore/favicons/30e58dd005ac36c6cd9d4b094caa29aeb1d78942.png">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+
+        _gaq.push(['_setAccount', 'UA-36735942-3']);
+        _gaq.push(['_trackPageview']);
+
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <style>
+        @media only screen and (max-width: 768px) {
+            .panel .patron-users {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            .alert-text h1 {
+                text-align: center;
+                margin: 0px !important;
+                font-size: 31px !important;
+            }
+            .category--grid {
+                display: flex !important;
+                flex-direction: column !important;
+                margin-top: 20px;
+            }
+            .category {
+                flex-direction: column;
+            }
+            .category .package {
+                max-width: none !important;
+            }
+            .alert-block {
+                margin-bottom: 0px !important;
+                height: auto !important;
+                padding: 28px !important;
+            }
+            div#content-wrapper {
+                padding: 20px 0px !important;
+            }
+            #foot .top .left {
+                display: none !important;
+            }
+            div#foot .top .right {
+                margin-right: auto !important;
+            }
+            div#foot .top {
+                padding: 20px !important;
+            }
+            div#foot .middle {
+                padding: 30px 0px !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+            div#foot .middle .watermark {
+                display: none !important;
+            }
+            div#foot .middle .text {
+                margin: 0 auto !important;
+                text-align: center !important;
+            }
+            .category--grid {
+                grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+                gap: 20px !important;
+            }
+            .container {
+                padding: 0 20px !important;
+            }
+            #foot .container {
+                padding: 0px !important;
+            }
+            .header--counts {
+                display: none !important;
+            }
+            div#head .container {
+                justify-content: center !important;
+            }
+            .user-block .text p {
+                display: none !important;
+            }
+        }
+
+        .discount {
+            text-decoration: line-through;
+            color: red;
+        }
+
+        .package-inner .image a {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .package-inner>a {
+            text-decoration: none !important;
+            display: block;
+        }
+
+        .package-inner {
+            flex: 1;
+            width: 100%;
+        }
+
+        .package .btn {
+            width: 100%;
+        }
+
+        .item-quantity {
+            margin: 5px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .item-quantity>button {
+            flex: 1;
+            padding: 6px;
+            font-weight: 900 !important;
+            color: white;
+            background: #4e2153;
+            border-radius: 4px;
+            border: 2px solid #69366e !important;
+        }
+
+        .item-quantity>button.active {
+            background: #dc0c33 !important;
+            color: white !important;
+            border-color: #ff3f63 !important;
+        }
+
+        .package-inner>a .image img {
+            margin: 0 auto;
+        }
+
+        .package-inner>a .image {
+            display: flex;
+        }
+
+        .tab-content>.tab-pane {
+            display: none !important;
+        }
+
+        .tab-content>.tab-pane.active {
+            display: flex !important;
+        }
+
+        .body .full-width {
+            padding: 0px !important;
+        }
+
+        .page-header {
+            border-bottom: 2px solid #56245c !important;
+        }
+
+        .page-header h4 {
+            font-weight: 700;
+            color: white;
+            font-size: 17px;
+        }
+
+        .form-control,
+        .checkout .packages table tbody .quantity input {
+            background: #1d0623 !important;
+            border-color: #58285e !important;
+            color: white !important;
+            font-weight: bold;
+        }
+
+        input::placeholder,
+        message::placeholder {
+            color: #dbbddf !important;
+        }
+
+        .btn {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        button#purchase-button {
+            padding: 18px;
+            font-weight: 900;
+            font-size: 15px;
+        }
+
+        .btn-primary {
+            background: #9b43a5 !important;
+        }
+
+        .btn {
+            font-weight: 800;
+        }
+
+        .input-group-btn:last-child>.btn,
+        .input-group-btn:last-child>.btn-group {
+            border-top-left-radius: 0px !important;
+            border-bottom-left-radius: 0px !important;
+            margin: 0px !important;
+        }
+
+        input.form-control {}
+
+        .checkout .table>thead>tr>th {
+            border: none !important;
+            font-size: 14px;
+        }
+
+        .checkout .packages table tbody .options {
+            width: 30%;
+        }
+
+        .checkout .packages table tbody .name {
+            width: 24%;
+        }
+
+        .checkout .packages table tbody .buttons .btn {
+            margin-left: 4px;
+        }
+
+        .btn-danger {
+            background: #fc254d !important;
+        }
+
+        button.btn.btn-default.btn-sm.hidden-xs {
+            background: #66316c !important;
+            color: white !important;
+        }
+
+        .btn-success {
+            background: #b043bd !important;
+        }
+
+        .checkout .packages table tbody .price {
+            font-size: 14px;
+        }
+
+        .checkout .packages table tbody .name {
+            font-weight: 700;
+            color: white;
+            font-size: 14px;
+        }
+
+        .title-text {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title-text:after {
+            content: "";
+            width: 45px;
+            height: 6px;
+            background: #ee143a;
+            margin-bottom: 5px;
+        }
+
+        .category .packages-row table .button .btn.btn-danger {
+            background: #f32148 !important;
+        }
+
+        .category--grid>.category-item {
+            text-decoration: none !important;
+        }
+
+        .body:before,
+        .body:after {
+            display: none;
+        }
+
+        .body {
+            display: flex;
+            margin: 0px;
+        }
+
+        .body .content {
+            width: auto;
+            padding: 0;
+            flex: 1;
+        }
+
+        .panel {
+            border: none !important;
+            background: #331137 !important;
+            border-radius: 10px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .panel .panel-heading {
+            background: transparent !important;
+            border-bottom: 2px solid #451d4a !important;
+            color: white !important;
+            padding: 25px;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .panel-body {
+            padding: 25px;
+            font-size: 15px;
+            color: #d2b8d5;
+        }
+
+        .table-striped>tbody>tr:nth-child(odd)>td,
+        .table-striped>tbody>tr:nth-child(odd)>th {
+            background: #2a0c2f;
+        }
+
+        .table>thead>tr>th,
+        .table>tbody>tr>th,
+        .table>tfoot>tr>th,
+        .table>thead>tr>td,
+        .table>tbody>tr>td,
+        .table>tfoot>tr>td {
+            border-top: 2px solid #451d4a !important;
+        }
+
+        .category .packages-row table .name {
+            font-weight: bold;
+            color: white;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #93fb65;
+        }
+
+        .category .packages-row table td {
+            padding: 15px !important;
+        }
+
+        .category .packages-row table .button .btn {
+            font-weight: 900;
+            font-size: 14px;
+            border-color: transparent !important;
+            border-radius: 5px !important;
+            background: #6ec34a !important;
+        }
+
+        .modal-content {
+            background: #331137 !important;
+            border: none !important;
+            border-radius: 12px !important;
+        }
+
+        .modal-header {
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            color: white !important;
+            border-bottom: 2px solid #4d1e53 !important;
+        }
+
+        .modal-header .close {
+            margin-top: 0px;
+            order: 5;
+            margin-left: auto;
+            text-shadow: none !important;
+            color: #906695;
+            opacity: 1;
+        }
+
+        .modal-title {
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .modal-body {
+            padding: 25px;
+            color: #d2b8d5;
+            font-size: 15px;
+        }
+
+        .modal-body strong,
+        .modal-body b {
+            color: white;
+        }
+
+        .modal-footer {
+            padding: 17px 25px;
+            border-top: 2px solid #4d1e53 !important;
+            color: white !important;
+        }
+
+        .modal-footer .btn {
+            font-weight: 900;
+            font-size: 14px;
+            border-color: transparent !important;
+            border-radius: 5px !important;
+            background: #6ec34a !important;
+            padding: 8px 15px;
+        }
+
+        .panel {
+            border: none !important;
+            background: #331137 !important;
+            border-radius: 10px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .panel .panel-heading {
+            background: transparent !important;
+            border-bottom: 2px solid #451d4a !important;
+            color: white !important;
+            padding: 25px;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .panel-body {
+            padding: 25px;
+            font-size: 15px;
+            color: #d2b8d5;
+        }
+
+        .table-striped>tbody>tr:nth-child(odd)>td,
+        .table-striped>tbody>tr:nth-child(odd)>th {
+            background: #2a0c2f;
+        }
+
+        .table>thead>tr>th,
+        .table>tbody>tr>th,
+        .table>tfoot>tr>th,
+        .table>thead>tr>td,
+        .table>tbody>tr>td,
+        .table>tfoot>tr>td {
+            border-top: 2px solid #451d4a !important;
+        }
+
+        .category .packages-row table .name {
+            font-weight: bold;
+            color: white;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #93fb65;
+        }
+
+        .category .packages-row table td {
+            padding: 15px !important;
+        }
+
+        .category .packages-row table .button .btn {
+            font-weight: 900;
+            font-size: 14px;
+            border-color: transparent !important;
+            border-radius: 5px !important;
+            background: #6ec34a !important;
+        }
+
+        .user-block {
+            text-decoration: none !important;
+        }
+
+        .dropdown-menu {
+            background: #411946 !important;
+            border: none !important;
+        }
+
+        .dropdown-menu>li>a {
+            background: transparent !important;
+            color: white !important;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .dropdown-menu>li.active>a {
+            background: #5f2865 !important;
+        }
+
+        a.user-block {
+            text-decoration: none !important;
+        }
+
+        .player-wrapper .icon {
+            position: relative;
+        }
+
+        .icon .count {
+            position: absolute;
+            top: 0;
+            background: #ec2046;
+            font-size: 12px;
+            font-weight: 900;
+            line-height: 1;
+            padding: 5px 8px;
+            border-radius: 10px;
+            left: 0;
+            margin: -10px;
+        }
+
+        .right .icon .count {
+            left: inherit;
+            right: 0;
+        }
+
+        .player-wrapper {
+            cursor: pointer;
+            transition: all .12s ease;
+        }
+
+        .player-wrapper:hover {
+            opacity: .86;
+        }
+
+        #belowHeader .container:after,
+        #belowHeader .container:before {
+            display: none;
+        }
+
+        .right .user-block {
+            display: none !important;
+            align-items: center;
+        }
+
+        .user-block h2 {
+            margin: 0;
+            font-size: 18px;
+            color: white !important;
+            font-weight: 800;
+            margin-bottom: 1px;
+        }
+
+        #belowHeader .container {
+            display: flex;
+            align-items: center;
+        }
+
+        div#belowHeader {
+            display: flex;
+        }
+
+        div#belowHeader .right {
+            margin-left: auto;
+        }
+
+        .user-block .text p {
+            margin-bottom: 0;
+            font-size: 13px;
+            color: #c799c4 !important;
+            font-weight: 800;
+        }
+
+        .header .buttons .toolbar>div>.btn i {
+            margin-right: 5px;
+            color: #c799c4 !important;
+            font-size: 17px;
+        }
+
+        #belowHeader .container:after,
+        #belowHeader .container:before {
+            display: none;
+        }
+
+        .user-block .text {
+            line-height: 1;
+        }
+
+        .header {
+            margin: 0px;
+        }
+
+        .header .buttons {
+            text-align: center;
+            width: 100%;
+            margin: 0px;
+        }
+
+        .header .buttons .toolbar {
+            margin: 0px;
+            display: flex;
+        }
+
+        .header .buttons .toolbar>div>.btn {
+            border: none !important;
+            background: transparent !important;
+            font-size: 14px;
+            color: white !important;
+            font-weight: 800;
+            font-family: "Prompt", sans-serif;
+            outline: none !important;
+        }
+
+        .user-block {
+            display: flex;
+            margin-right: auto;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .user-block .flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-block .avatar img {
+            max-width: 40px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .right .user-block {
+            display: none !important;
+            align-items: center;
+        }
+
+        .user-block h2 {
+            margin: 0;
+            font-size: 18px;
+            color: white !important;
+            font-weight: 800;
+            margin-bottom: 1px;
+        }
+
+        #belowHeader .container {
+            display: flex;
+            align-items: center;
+        }
+
+        div#belowHeader {
+            display: flex;
+        }
+
+        div#belowHeader .right {
+            margin-left: auto;
+        }
+
+        .user-block .text p {
+            margin-bottom: 0;
+            font-size: 13px;
+            color: #c799c4 !important;
+            font-weight: 800;
+        }
+
+        .header .buttons .toolbar>div>.btn i {
+            margin-right: 5px;
+            opacity: .5;
+            font-size: 16px;
+            color: white !important;
+        }
+
+        .category--grid>.category-item.other {
+            background: #a4320d !important;
+        }
+
+        .category--grid>.category-item {
+            border-bottom: 12px solid transparent;
+        }
+
+        .category--grid>.category-item.other:after {
+            background: linear-gradient(45deg, #ffa207, transparent);
+        }
+
+        .category--grid>.category-item.bundles {
+            background: #00387d;
+        }
+
+        .category--grid>.category-item.bundles:after {
+            background: linear-gradient(45deg, #2196F3, transparent);
+        }
+
+        .category-item.bundles p {
+            color: #b1daff !important;
+        }
+
+        .category-item.other p {
+            color: #ffe9b5 !important;
+        }
+
+        .category-name h1 {
+            margin-top: 0px;
+            position: relative;
+        }
+
+        .category-item:before {
+            height: 45px;
+            width: 7px;
+            background: white;
+            content: "";
+            position: absolute;
+            left: 0px;
+            z-index: 2;
+            bottom: 80px;
+        }
+
+        .category--grid>.category-item.ranks {
+            background: #7e1027;
+        }
+
+        .category--grid>.category-item.ranks:after {
+            background: linear-gradient(45deg, #d9082f, transparent);
+        }
+
+        .category--grid>.category-item.ranks p {
+            color: #ff94a8;
+        }
+
+        .category-name h1 {
+            font-weight: 900;
+            color: white;
+            font-size: 41px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .category-name p {
+            font-size: 12px;
+            color: #c799c4;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .category-name {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            position: relative;
+            z-index: 5;
+        }
+
+        .category--grid>.category-item {
+            padding: 50px;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category--grid>.category-item:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: linear-gradient(45deg, #531f59, transparent);
+        }
+
+        div#head {
+            position: relative;
+        }
+
+        .category--grid>.category-item {
+            cursor: pointer;
+            transition: all .13s linear;
+        }
+
+        .category--grid>.category-item:hover {
+            transform: scale(1.02);
+        }
+
+        .header-bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            opacity: .35;
+        }
+
+        .header-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(10px);
+        }
+
+        div#head .container {
+            position: relative;
+            z-index: 5;
+        }
+
+        .header-gradient {
+            position: absolute;
+            z-index: 2;
+            background: linear-gradient(0deg, #26082a, transparent);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .player-wrapper .icon {
+            background: linear-gradient(225deg, #3d1c41, transparent) !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Prompt", sans-serif;
+        }
+
+        body {
+            font-family: "Nunito", sans-serif;
+        }
+
+        .alert-top-bar .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .alert-top-bar .container:before,
+        .alert-top-bar .container:after {
+            display: none;
+        }
+
+        .alert-top-bar .container {
+            gap: 10px;
+        }
+
+        .alert-top-bar .container p {
+            margin-right: auto;
+        }
+
+        .alert-top-bar .container i {
+            opacity: .65;
+            cursor: pointer;
+        }
+
+        .alert-top-bar {
+            background: #d2092f;
+            padding: 17px 0px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            font-weight: bold;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .alert-top-bar p {
+            margin: 0px;
+        }
+
+        .player-wrapper .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        div#belowHeader {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        div#foot {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        .view-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body {
+            background: #1d0623;
+            margin: 0px;
+        }
+
+        div#foot {
+            margin-top: auto;
+            background: #26082a;
+            border-top: 7px solid #330b31;
+        }
+
+        div#head {
+            background: #26082a;
+            padding: 50px 0px;
+        }
+
+        div#head .container {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        div#head .container:before,
+        div#head .container:after {
+            display: none;
+        }
+
+        .header--counts {
+            flex: 1;
+            border-left: 2px solid #41103e;
+            display: flex;
+            align-items: center;
+            padding-left: 60px;
+            height: 62px;
+        }
+
+        .logo {
+            max-width: 264px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .player-wrapper .icon {
+            width: 60px;
+            height: 60px;
+            background: #330b31;
+            border-radius: 15px;
+        }
+
+        .player-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .right .player-wrapper .icon {
+            order: 5;
+        }
+
+        .right .player-wrapper {
+            text-align: right;
+        }
+
+        .header--counts .right {
+            margin-left: auto;
+        }
+
+        .player-wrapper .text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            gap: 3px;
+        }
+
+        .player-wrapper .text .s-text {
+            order: -1;
+            color: #ff2c54;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .player-wrapper .text .l-text {
+            font-family: "Prompt", sans-serif;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 24px;
+        }
+
+        .category--grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 30px;
+        }
+
+        .category--grid>.category-item {
+            min-height: 225px;
+            background: #2c0d30;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        div#content-wrapper {
+            flex: 1;
+            padding-top: 50px;
+            padding-bottom: 75px;
+        }
+
+        div#foot .top {
+            display: flex;
+            align-items: center;
+            padding: 30px 0px;
+        }
+
+        div#foot .top h1 {
+            margin: 0px;
+            color: white;
+            font-weight: 900;
+            font-size: 22px;
+        }
+
+        div#foot .top .right {
+            margin-left: auto;
+            display: flex;
+            gap: 20px;
+        }
+
+        div#foot .container:after,
+        div#foot .container:before {
+            display: none;
+        }
+
+        div#foot span#benj {
+            max-width: 47px;
+            display: block;
+        }
+
+        div#foot span#benj svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        div#foot .middle {
+            display: flex;
+            align-items: center;
+        }
+
+        div#foot .middle .watermark {
+            margin-left: auto;
+        }
+
+        div#foot .top .right>a {
+            background: #441a42;
+            color: #e2b7e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        div#foot .middle {
+            padding: 40px 0px;
+            border-top: 2px solid #30112f !important;
+            color: #64356d;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        div#foot .middle span {
+            font-size: 14px;
+            display: inline-block;
+            color: #895986;
+        }
+
+        div#foot .middle span strong {
+            color: #c799c4;
+        }
+
+        div#foot span#benj svg path {
+            fill: #441a42;
+        }
+
+        div#belowHeader {
+            background: #2c0d30;
+            height: 92px;
+            border-bottom: 7px solid #331137;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0px;
+        }
+
+        .alert-block {
+            height: 150px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            background: #ec0934;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .alert-image {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: .065;
+        }
+
+        .alert-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .alert-text {
+            position: relative;
+            color: white;
+        }
+
+        .alert-text h1 {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 42px;
+            text-shadow: 5px 6px 0px #0000002e;
+            letter-spacing: 2px;
+        }
+
+        .panel.panel-default.transparent {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .panel.panel-default.transparent .panel-body {
+            padding: 0px !important;
+        }
+
+        .category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .category .package {
+            max-width: 380px;
+            background: #2c0d30;
+            padding: 50px;
+            border: 3px solid #331137;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            transition: all .15s ease;
+        }
+
+        .panel.transparent .panel-heading {
+            border: none !important;
+            text-align: center;
+            margin-bottom: 0px !important;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 0;
+            font-size: 40px;
+        }
+
+        .category .package .info {
+            flex: 1;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .package .btn {
+            padding: 10px;
+            font-weight: 900;
+            font-size: 17px;
+        }
+
+        .btn {
+            border-radius: 6px !important;
+            border-color: transparent !important;
+        }
+
+        .btn-info {
+            background: #03A9F4 !important;
+        }
+
+        .info .price {
+            font-size: 18px;
+        }
+
+        .category .package .info .name {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            font-family: "Prompt", sans-serif;
+        }
+
+        .panel-heading .tooltip-inner {
+            background: #411946 !important;
+            padding: 12px;
+            max-width: 400px;
+        }
+
+        .panel-heading .tooltip-inner p {
+            margin: 0;
+        }
+
+        .category .package:hover {
+            transform: scale(1.04);
+        }
+
+        .panel-heading .return,
+        .panel-heading .info {
+            background: #2c0d30;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 18px;
+            color: #ab73b2 !important;
+            border: 2px solid #3e1643;
+        }
+
+        .panel-heading .return {
+            margin-right: auto;
+            text-decoration: none !important;
+        }
+
+        .panel-heading .info {
+            margin-left: auto;
+        }
+
+        .panel.transparent .panel-heading {
+            padding: 25px 0px !important;
+        }
+
+        .header .buttons .toolbar>div>.btn {
+            background: #f21d44 !important;
+            padding: 10px 20px;
+            font-weight: 600 !important;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+        }
+
+        .header .buttons .toolbar {
+            gap: 15px;
+        }
+
+        .header .buttons .toolbar:before,
+        .header .buttons .toolbar:after {
+            display: none;
+        }
+
+        .header .buttons .toolbar>div.currency>.btn {
+            background: #2196F3 !important;
+        }
+
+        .header .buttons .toolbar>div.basket>.btn {
+            opacity: 1 !important;
+            cursor: pointer !important;
+        }
+
+        .header .buttons .toolbar>div>.btn {
+            border: 2px solid #ffffff45 !important;
+        }
+
+        .header .buttons .toolbar>div.patrons>.btn {
+            background: #ab3acd !important;
+        }
+    </style>
+    <style>
+        div#saleCountdownContainer p {
+            font-size: 17px !important;
+        }
+
+        div#saleCountdownContainer {
+            min-width: 250px !important;
+        }
+
+        .alert-image {
+            opacity: .15 !important;
+        }
+
+        .patron-title {
+            background: #f21d44 !important;
+            border: 2px solid #ffffff45 !important;
+            padding: 16px 20px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+            color: white !important;
+            font-weight: 900 !important;
+            font-size: 17px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        .body .panel-body.content {
+            padding: 25px !important;
+        }
+
+        .patron-users>div {
+            background: #2c0d30;
+            border: 3px solid #3e1843;
+            border-radius: 12px;
+            text-align: center;
+            padding-top: 20px;
+            overflow: hidden;
+        }
+
+        .patron-users {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+            gap: 25px;
+        }
+
+        .patron-users>div .name {
+            color: white;
+            font-size: 17px;
+            font-weight: 800;
+            border-top: 2px solid #3e1843;
+            display: block;
+            padding: 15px;
+            background: #1d0623;
+        }
+
+        .patron-users>div .image {
+            max-height: 100px;
+            overflow: hidden;
+        }
+
+        .patron-users>div .image img {
+            max-width: 91px;
+        }
+
+        .right .player-wrapper {
+            text-decoration: none !important;
+        }
+
+        .keys {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .keys .category {
+            width: 100%;
+            max-width: 380px;
+        }
+
+        div#saleCountdownContainer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #66d441;
+            padding: 14px 30px;
+            border-radius: 10px;
+            min-width: 210px;
+            height: 50px;
+            text-align: center;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            margin: 20px;
+        }
+
+        div#saleCountdownContainer p {
+            margin: 0px;
+        }
+
+        div#saleCountdownContainer p {
+            font-size: 14px;
+            text-shadow: 2px 2px 0px #0000002e;
+            letter-spacing: 2px;
+            font-family: "Prompt", sans-serif;
+            font-weight: 900;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .alert-block {
+            overflow: visible;
+        }
+
+        div#saleCountdownContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            gap: 8px;
+        }
+
+        div#saleCountdownContainer i {
+            text-shadow: 2px 3px 0px #0000002e;
+        }
+
+        .category .package img {
+            max-width: 150px;
+            margin: 0 auto;
+        }
+
+        /* */
+
+        #subcategories {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2c0d30;
+            z-index: 10;
+        }
+
+        .subcategories-list {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 30px;
+            padding-bottom: 10px !important;
+        }
+
+        .subcategories-list>a {
+            font-weight: 900;
+            font-size: 19px;
+            color: white !important;
+            text-decoration: none !important;
+            padding: 8px 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        (function(c, l, a, r, i, t, y) {
+            c[a] = c[a] || function() {
+                (c[a].q = c[a].q || []).push(arguments)
+            };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "fxlepb8eap");
+    </script>
+</head>
+
+<body>
+
+    <div class="view-wrapper">
+        <div class="alert-top-bar">
+            <div class="container">
+                <i class="fa-solid fa-gift"></i>
+                <p>Celebrate our new season release with <strong>30% OFF</strong>!</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div id="head">
+            <div class="header-gradient"></div>
+            <div class="header-bg">
+                <img src="https://pcsite.co.uk/wp-content/uploads/2023/12/minecraft-wallpaper.jpg">
+            </div>
+            <div class="container">
+                <div class="logo">
+                    <a href="/">
+                        <img src="https://i.imgur.com/xdej3SZ.png">
+                    </a>
+                </div>
+                <div class="header--counts">
+                    <div class="left">
+                        <div class="player-wrapper" id="copy" data-clipboard-text="europemc.eu">
+                            <div class="icon"><i class="fa-solid fa-play"></i><span class="count">0</span></div>
+                            <div class="text">
+                                <div class="l-text">Play Now</div>
+                                <div class="s-text">Click to copy</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a href="https://discord.gg/europemc" target="_blank" class="player-wrapper discord">
+                            <div class="icon"><i class="fa-brands fa-discord"></i><span class="count">0</span></div>
+                            <div class="text">
+                                <div class="l-text">Discord</div>
+                                <div class="s-text">Click to join</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="belowHeader">
+            <!-- -->
+            <div class="container">
+                <div class="left">
+                    <a href="/login" class="user-block">
+                        <div class="avatar"><img src="https://mc-heads.net/avatar/31f1ccfd03884754ac42374a78cc168c/50"></div>
+                        <div class="text">
+                            <h2>Guest</h2>
+                            <p>Click to login</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="right">
+                    <div class="header">
+                        <div class="buttons">
+                            <div class="toolbar">
+                                <div class="patrons hidden-xs hidden-sm">
+                                    <a href="/patrons" class="btn btn-info"><i class="fa-solid fa-crown"></i> Patrons</a>
+                                </div>
+                                <div class="currency">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fas fa-globe-americas"></i> EUR <span class="fa fa-caret-down"></span></button>
+                                    <ul class="dropdown-menu" role="menu">
+
+
+                                        <li>
+                                            <a href="?currency=AUD">AUD</a>
+                                        </li>
+
+
+
+                                        <li>
+                                            <a href="?currency=BRL">BRL</a>
+                                        </li>
+
+
+
+                                        <li>
+                                            <a href="?currency=CAD">CAD</a>
+                                        </li>
+
+
+
+
+
+                                        <li>
+                                            <a href="?currency=DKK">DKK</a>
+                                        </li>
+
+
+
+                                        <li class="active">
+                                            <a href="?currency=EUR">EUR</a>
+                                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <li>
+                                            <a href="?currency=NOK">NOK</a>
+                                        </li>
+
+
+
+                                        <li>
+                                            <a href="?currency=NZD">NZD</a>
+                                        </li>
+
+
+
+
+
+                                        <li>
+                                            <a href="?currency=PLN">PLN</a>
+                                        </li>
+
+
+
+                                        <li>
+                                            <a href="?currency=GBP">GBP</a>
+                                        </li>
+
+
+
+
+
+                                        <li>
+                                            <a href="?currency=SEK">SEK</a>
+                                        </li>
+
+
+
+
+
+
+
+
+
+
+
+                                        <li>
+                                            <a href="?currency=USD">USD</a>
+                                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    </ul>
+                                </div>
+                                <div class="basket">
+                                    <a href="/checkout/basket" class="btn btn-info">
+                                      <i class="fas fa-shopping-bag"></i> View Cart
+                                  </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content-wrapper">
+            <div class="container">
+
+
+                <div class="alert-block">
+                    <div class="alert-image"><img src="https://static.vecteezy.com/system/resources/previews/029/597/086/non_2x/cube-voxel-surface-landscape-ai-generated-photo.jpg"></div>
+                    <div class="alert-text">
+                        <h1>SEASON RELEASE!</h1>
+                    </div>
+                    <div id="saleCountdownContainer">
+                        <i class="fa-regular fa-hourglass-half"></i>
+                        <p id="saleCountdown"></p>
+                    </div>
+                </div>
+
+                <div class="category--grid">
+                    <a href="/category/2751361" class="category-item Ranks">
+                        <div class="category-name">
+                            <h1>Ranks</h1>
+                            <p>Click to browse</p>
+                        </div>
+                    </a>
+                    <a href="/category/rank-upgrades" class="category-item Rank Upgrades">
+                        <div class="category-name">
+                            <h1>Rank Upgrades</h1>
+                            <p>Click to browse</p>
+                        </div>
+                    </a>
+                    <a href="/category/punishments" class="category-item Punishments">
+                        <div class="category-name">
+                            <h1>Punishments</h1>
+                            <p>Click to browse</p>
+                        </div>
+                    </a>
+                    <a href="/category/crate-keys" class="category-item Coins">
+                        <div class="category-name">
+                            <h1>Coins</h1>
+                            <p>Click to browse</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+            <div class="container">
+                <div class="top">
+                    <div class="left">
+                        <h1>EuropeMC</h1>
+                    </div>
+                    <div class="right">
+                        <a href="/">Home</a>
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms and Conditions</a>
+                        <a href="/notetoparents">Note to Parents</a>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="text">
+                        <span>Copyright 2025 <strong>EuropeMC</strong></span>
+                        <br /> We are not affiliated with Mojang, AB.
+                    </div>
+                    <section class="watermark">
+                        <a href="https://benjdzn.com/">
+                            <span id="benj">
+                                <svg
+                                    version="1.1"
+                                    id="Layer_1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px"
+                                    y="0px"
+                                    viewBox="0 0 107.2 53.9"
+                                    style="enable-background: new 0 0 107.2 53.9;"
+                                    xml:space="preserve"
+                                >
+                                    <g id="XMLID_2_">
+                                        <path
+                                            id="XMLID_7_"
+                                            class="st0"
+                                            d="M38.8,32.2c0.9-1.7,1.8-3.9,1.3-5.9c-0.5-1.7-2-2.6-3.7-2.9c0.8-0.4,1.6-0.9,2.4-1.4c2.8-1.8,5.4-3.8,7.9-6c2.3-2.1,5.1-4.6,5-7.9c-0.1-3.3-3-5.7-6.1-6.3c-3.4-0.8-7.2-0.3-10.6,0.2c-7.1,1.2-13.9,4-20.3,7.3c-3.2,1.6-6.4,3.4-9.2,5.7C3,16.9,0.2,20,0,23.3c-0.1,0.9,1.1,1.2,1.7,0.7c1-0.8,1.8-1.8,2.7-2.7c0.9-0.9,1.8-1.9,2.8-2.7c2.2-1.7,4.5-3.2,6.9-4.6c5.3-2.9,10.9-5.5,16.8-7.1c0.5-0.1,0.9-0.2,1.4-0.4c-0.5,0.9-1,1.8-1.3,2.6c-0.7,1.7-1.5,3.4-2.1,5.2c-1.3,3.6-2.5,7.2-3.5,10.8c0,0.2-0.1,0.3-0.1,0.5c-3.7,1.5-7.5,3.6-10.3,6.3c-0.9,0.9,0.2,2.1,1.3,1.6c2.2-1,4.3-2.1,6.5-3c0.4-0.2,0.9-0.4,1.3-0.5c-0.5,2-1,3.9-1.4,5.9c-0.4,1.8-0.8,3.7-1,5.5c-0.2,1.2-0.4,2.5-0.5,3.8c-0.5,0.4-1,0.7-1.5,1.1c-1.8,1.3-3.9,2.2-5.7,3.5c-0.6,0.4-0.2,1.3,0.5,1.1c2.5-0.6,5-1.8,7.3-3.1c0.2,0,0.3-0.1,0.4-0.2c1.1-0.7,2.2-1.3,3.3-2c3.5-2.3,6.8-5.1,9.6-8.3C36.4,35.7,37.8,34,38.8,32.2z M32.5,15.9c0.7-1.7,1.3-3.5,1.9-5.2c0.5-1.4,1.1-3.2,1.2-4.8c1.5-0.2,2.9-0.4,4.4-0.5c2.2-0.1,6.4-0.4,7.4,2.2c0.9,2.2-2.6,4.7-4,5.9c-2.1,1.9-4.3,3.7-6.7,5.3c-2.2,1.6-4.5,3-6.9,4.4C30.8,20.7,31.6,18.3,32.5,15.9z M25.1,42.1c-0.5,0.4-1,0.8-1.5,1.2c0.1-0.3,0.2-0.5,0.3-0.8c0.6-1.7,1.1-3.5,1.7-5.3c0.8-2.9,1.7-5.7,2.6-8.6c0.5-0.1,0.9-0.3,1.4-0.4c1.1-0.3,2.2-0.6,3.3-0.9c0.7-0.2,2.9-0.6,3.4,0.2c0.1,0.2-0.5,1.7-0.6,2.1c-0.4,1-1,2-1.6,2.8C31.6,36.1,28.4,39.3,25.1,42.1z"
+                                        ></path>
+                                        <path
+                                            id="XMLID_4_"
+                                            class="st0"
+                                            d="M105.7,4.5c-0.2,0-0.4-0.1-0.6-0.1c0,0,0,0,0,0c0,0,0,0-0.1,0c-8-1-16-0.1-24,1.3c0.2-1.7,0.3-3.3,0.3-5c0-0.8-1.2-1-1.4-0.2c-0.5,1.9-1,3.8-1.5,5.6c-0.6,0.1-1.1,0.2-1.7,0.3c-4.7,0.9-9.5,2-14.3,2.1c-1.6,0-4.8,0.4-5.1-1.8c-0.2-1.9,1.7-3.6,2.9-4.8c0.3-0.3-0.1-0.8-0.5-0.6c-1.9,0.9-3.6,1.9-4.6,3.8c-0.8,1.7-0.7,3.8,0.6,5.2c1.7,1.9,4.8,2,7.1,2c2.8,0.1,5.6-0.4,8.4-0.8c1.9-0.3,3.9-0.7,5.8-1c-0.3,0.9-0.5,1.7-0.8,2.6c-1.3,4.3-2.9,8.5-4.3,12.8c-0.1,0.2-0.1,0.4-0.2,0.6c-0.1-0.5-0.1-1-0.3-1.5c-0.1-0.6-1-0.6-1.2,0c-0.2,0.6-0.3,1.3-0.5,1.9c-0.3,0.9-0.7,1.6-1.1,2.5c-0.5,0.9-0.9,2-1.7,2.7c-0.7,0.7-1.1,0.4-1.2-0.6c-0.1-1,0.3-2.2,0.5-3.1c1.2-4.2,3.4-8.1,4.2-12.5c0.2-1.1-0.5-2.4-1.8-2.3c-4.5,0.3-6.9,4.2-9.1,7.6c-0.2,0.4-0.5,0.7-0.7,1.1c0.6-1.9,1.2-3.8,1.7-5.6c0.6-2-2.5-3.4-3.5-1.5c-2.3,4.2-4.3,8.4-6.5,12.6c-0.5,1-3.7,7-5.5,5.9c1.7-1.8,3.1-3.9,4.3-6.1c1.2-2.3,3-5,3.2-7.6c0.3-3.2-3-5-5.7-3.6c-2.6,1.2-4.1,4.4-5.1,6.9c-1.1,2.6-1.7,5.7-1.4,8.6c0.1,1.1,0.4,2.3,1,3.3c-1,1-2.2,2-3.5,2.7c-0.5,0.3-0.1,1,0.4,0.8c1.4-0.6,2.7-1.4,3.9-2.3c0.6,0.6,1.2,1,2.1,1.3c2.4,0.7,4.7-0.9,6.2-2.7c0.6-0.7,1.2-1.4,1.7-2.2c-0.1,0.7-0.2,1.4-0.3,2.1c-0.1,0.9,0.8,1.7,1.6,1.8c1,0.1,1.7-0.4,2-1.3c1.6-3.7,3.9-7.3,6.1-10.7c1-1.6,2-3.2,3.2-4.7c0.3-0.3,0.5-0.6,0.8-0.9c-0.6,1.7-1.3,3.3-2,5c-1.1,2.7-2.5,6.3-1.7,9.3c0.9,3,4.4,4.1,6.6,1.7c0.1-0.2,0.3-0.3,0.4-0.5c-0.5,1.6-0.9,3.1-1.3,4.7c0,0,0-0.1-0.1-0.1c-2.3-4-6.8-3.1-10.3-1.6c-4.3,1.8-8.6,3.7-12.8,5.5c-1.6,0.7-3.6,1.6-5.4,0.9c-1.5-0.7-1.5-3.1-2-4.5c-0.4-0.9-1.4-1.1-2-0.3c-2.7,3.5-0.6,8.1,3.6,9.1c2.1,0.5,4.3,0,6.3-0.8c2.2-0.9,4.4-1.9,6.5-2.8c2.1-0.9,4.2-1.8,6.3-2.7c1.3-0.6,4-2.2,5.5-1.5c1.3,0.6,1.4,3.2,1.6,4.3c0.4,2.4,0.5,4.8,0.3,7.1c-0.1,1.1,1,2.1,2.1,2.1c1.3,0,2-1,2.2-2.1c1.1-8.7,3.8-17.1,6.3-25.5c1.6-5.3,3.2-10.8,4.2-16.3c3.1-0.5,6.1-1,9.2-1.4c-1.6,1.2-2.9,2.6-3.3,4.3c-0.2,0.8,0.6,1.9,1.5,1.5c1.4-0.5,2.5-1.5,3.8-2.2c1.3-0.8,2.8-1.6,4.3-2.1c2.9-1.2,6.1-1.6,9.2-1.4C107.5,8.9,108.1,4.8,105.7,4.5z M44.8,28c0.4-2.3,1.2-4.4,2.5-6.3c0.4-0.6,1.1-1.9,1.8-2.1c1-0.3,0.4,1.2,0.3,1.6c-0.6,2-1.4,4-2.3,5.9c-0.7,1.5-1.5,3-2.5,4.4C44.5,30.3,44.6,29,44.8,28z"
+                                        ></path>
+                                        <path
+                                            id="XMLID_3_"
+                                            class="st0"
+                                            d="M77.3,32.4c-0.5,0-1,0.2-1.3,0.5c-0.3,0.3-0.6,0.8-0.6,1.3c0,0.5,0.2,1,0.5,1.3c0.4,0.3,0.8,0.5,1.3,0.6c0.5,0,1-0.2,1.3-0.5c0.3-0.3,0.6-0.8,0.6-1.3c0-0.5-0.2-1-0.5-1.3C78.3,32.7,77.8,32.4,77.3,32.4z"
+                                        ></path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="popup-modal" tabindex="-1" role="dialog"></div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/templates/209/js/bootstrap.min.js"></script>
+    <script src="/templates/209/js/skin.min.js"></script>
+    <script src="/templates/209/js/site.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var endDate = new Date("2025-5-5").getTime();
+            var countdownElement = document.getElementById('saleCountdown');
+            var countdownContainer = document.getElementById('saleCountdownContainer');
+
+
+            function updateCountdown() {
+                var now = new Date().getTime();
+                var distance = endDate - now;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    countdownElement.innerHTML = "EXPIRED";
+                    return;
+                }
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            }
+
+            updateCountdown();
+
+            var x = setInterval(updateCountdown, 1000);
+        });
+        $(".item-quantity > button").click(function(event) {
+            const anchor = this.getAttribute('href');
+            const qty = this.getAttribute('data-amount');
+            if ($('' + anchor + '').find('button[data-amount="' + qty + '"]')) {
+
+                $('' + anchor + '').find('button').removeClass('active');
+                $('' + anchor + '').find('button[data-amount="' + qty + '"]').addClass('active');
+            } else {}
+        });
+        jQuery(function() {
+            var countdowns = $(".countdown-to");
+            countdowns.each(function() {
+                setInterval(function(ele) {
+                    timeLeft = parseInt(ele.attr("data-countdown"));
+                    if (timeLeft == 0) {
+                        ele.html("Time Expired!");
+                    } else {
+                        timeLeft--;
+                        ele.attr("data-countdown", timeLeft);
+                        var days = Math.floor(timeLeft / (60 * 60 * 24));
+                        var hours = Math.floor((timeLeft % (60 * 60 * 24)) / (60 * 60));
+                        var minutes = Math.floor((timeLeft % (60 * 60)) / (60));
+                        var seconds = Math.floor((timeLeft % 60));
+                        ele.html(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                    }
+                }, 1000, jQuery(this));
+            });
+        });
+        var server = 'europemc.eu';
+        var serverPort = '25565';
+        var discord = '1204408821699715142';
+        ! function(e) {
+            if ("object" == typeof exports && "undefined" != typeof module) module.exports = e();
+            else if ("function" == typeof define && define.amd) define([], e);
+            else {
+                var t;
+                t = "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : this, t.Clipboard = e()
+            }
+        }(function() {
+            var e, t, n;
+            return function e(t, n, i) {
+                function o(a, c) {
+                    if (!n[a]) {
+                        if (!t[a]) {
+                            var l = "function" == typeof require && require;
+                            if (!c && l) return l(a, !0);
+                            if (r) return r(a, !0);
+                            var s = new Error("Cannot find module '" + a + "'");
+                            throw s.code = "MODULE_NOT_FOUND", s
+                        }
+                        var u = n[a] = {
+                            exports: {}
+                        };
+                        t[a][0].call(u.exports, function(e) {
+                            var n = t[a][1][e];
+                            return o(n ? n : e)
+                        }, u, u.exports, e, t, n, i)
+                    }
+                    return n[a].exports
+                }
+                for (var r = "function" == typeof require && require, a = 0; a < i.length; a++) o(i[a]);
+                return o
+            }({
+                1: [function(e, t, n) {
+                    function i(e, t) {
+                        for (; e && e !== document;) {
+                            if (e.matches(t)) return e;
+                            e = e.parentNode
+                        }
+                    }
+                    if (Element && !Element.prototype.matches) {
+                        var o = Element.prototype;
+                        o.matches = o.matchesSelector || o.mozMatchesSelector || o.msMatchesSelector || o.oMatchesSelector || o.webkitMatchesSelector
+                    }
+                    t.exports = i
+                }, {}],
+                2: [function(e, t, n) {
+                    function i(e, t, n, i, r) {
+                        var a = o.apply(this, arguments);
+                        return e.addEventListener(n, a, r), {
+                            destroy: function() {
+                                e.removeEventListener(n, a, r)
+                            }
+                        }
+                    }
+
+                    function o(e, t, n, i) {
+                        return function(n) {
+                            n.delegateTarget = r(n.target, t), n.delegateTarget && i.call(e, n)
+                        }
+                    }
+                    var r = e("./closest");
+                    t.exports = i
+                }, {
+                    "./closest": 1
+                }],
+                3: [function(e, t, n) {
+                    n.node = function(e) {
+                        return void 0 !== e && e instanceof HTMLElement && 1 === e.nodeType
+                    }, n.nodeList = function(e) {
+                        var t = Object.prototype.toString.call(e);
+                        return void 0 !== e && ("[object NodeList]" === t || "[object HTMLCollection]" === t) && "length" in e && (0 === e.length || n.node(e[0]))
+                    }, n.string = function(e) {
+                        return "string" == typeof e || e instanceof String
+                    }, n.fn = function(e) {
+                        var t = Object.prototype.toString.call(e);
+                        return "[object Function]" === t
+                    }
+                }, {}],
+                4: [function(e, t, n) {
+                    function i(e, t, n) {
+                        if (!e && !t && !n) throw new Error("Missing required arguments");
+                        if (!c.string(t)) throw new TypeError("Second argument must be a String");
+                        if (!c.fn(n)) throw new TypeError("Third argument must be a Function");
+                        if (c.node(e)) return o(e, t, n);
+                        if (c.nodeList(e)) return r(e, t, n);
+                        if (c.string(e)) return a(e, t, n);
+                        throw new TypeError("First argument must be a String, HTMLElement, HTMLCollection, or NodeList")
+                    }
+
+                    function o(e, t, n) {
+                        return e.addEventListener(t, n), {
+                            destroy: function() {
+                                e.removeEventListener(t, n)
+                            }
+                        }
+                    }
+
+                    function r(e, t, n) {
+                        return Array.prototype.forEach.call(e, function(e) {
+                            e.addEventListener(t, n)
+                        }), {
+                            destroy: function() {
+                                Array.prototype.forEach.call(e, function(e) {
+                                    e.removeEventListener(t, n)
+                                })
+                            }
+                        }
+                    }
+
+                    function a(e, t, n) {
+                        return l(document.body, e, t, n)
+                    }
+                    var c = e("./is"),
+                        l = e("delegate");
+                    t.exports = i
+                }, {
+                    "./is": 3,
+                    delegate: 2
+                }],
+                5: [function(e, t, n) {
+                    function i(e) {
+                        var t;
+                        if ("SELECT" === e.nodeName) e.focus(), t = e.value;
+                        else if ("INPUT" === e.nodeName || "TEXTAREA" === e.nodeName) e.focus(), e.setSelectionRange(0, e.value.length), t = e.value;
+                        else {
+                            e.hasAttribute("contenteditable") && e.focus();
+                            var n = window.getSelection(),
+                                i = document.createRange();
+                            i.selectNodeContents(e), n.removeAllRanges(), n.addRange(i), t = n.toString()
+                        }
+                        return t
+                    }
+                    t.exports = i
+                }, {}],
+                6: [function(e, t, n) {
+                    function i() {}
+                    i.prototype = {
+                        on: function(e, t, n) {
+                            var i = this.e || (this.e = {});
+                            return (i[e] || (i[e] = [])).push({
+                                fn: t,
+                                ctx: n
+                            }), this
+                        },
+                        once: function(e, t, n) {
+                            function i() {
+                                o.off(e, i), t.apply(n, arguments)
+                            }
+                            var o = this;
+                            return i._ = t, this.on(e, i, n)
+                        },
+                        emit: function(e) {
+                            var t = [].slice.call(arguments, 1),
+                                n = ((this.e || (this.e = {}))[e] || []).slice(),
+                                i = 0,
+                                o = n.length;
+                            for (i; i < o; i++) n[i].fn.apply(n[i].ctx, t);
+                            return this
+                        },
+                        off: function(e, t) {
+                            var n = this.e || (this.e = {}),
+                                i = n[e],
+                                o = [];
+                            if (i && t)
+                                for (var r = 0, a = i.length; r < a; r++) i[r].fn !== t && i[r].fn._ !== t && o.push(i[r]);
+                            return o.length ? n[e] = o : delete n[e], this
+                        }
+                    }, t.exports = i
+                }, {}],
+                7: [function(t, n, i) {
+                    ! function(o, r) {
+                        if ("function" == typeof e && e.amd) e(["module", "select"], r);
+                        else if ("undefined" != typeof i) r(n, t("select"));
+                        else {
+                            var a = {
+                                exports: {}
+                            };
+                            r(a, o.select), o.clipboardAction = a.exports
+                        }
+                    }(this, function(e, t) {
+                        "use strict";
+
+                        function n(e) {
+                            return e && e.__esModule ? e : {
+                                default: e
+                            }
+                        }
+
+                        function i(e, t) {
+                            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+                        }
+                        var o = n(t),
+                            r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+                                return typeof e
+                            } : function(e) {
+                                return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+                            },
+                            a = function() {
+                                function e(e, t) {
+                                    for (var n = 0; n < t.length; n++) {
+                                        var i = t[n];
+                                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                                    }
+                                }
+                                return function(t, n, i) {
+                                    return n && e(t.prototype, n), i && e(t, i), t
+                                }
+                            }(),
+                            c = function() {
+                                function e(t) {
+                                    i(this, e), this.resolveOptions(t), this.initSelection()
+                                }
+                                return a(e, [{
+                                    key: "resolveOptions",
+                                    value: function e() {
+                                        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                                        this.action = t.action, this.emitter = t.emitter, this.target = t.target, this.text = t.text, this.trigger = t.trigger, this.selectedText = ""
+                                    }
+                                }, {
+                                    key: "initSelection",
+                                    value: function e() {
+                                        this.text ? this.selectFake() : this.target && this.selectTarget()
+                                    }
+                                }, {
+                                    key: "selectFake",
+                                    value: function e() {
+                                        var t = this,
+                                            n = "rtl" == document.documentElement.getAttribute("dir");
+                                        this.removeFake(), this.fakeHandlerCallback = function() {
+                                            return t.removeFake()
+                                        }, this.fakeHandler = document.body.addEventListener("click", this.fakeHandlerCallback) || !0, this.fakeElem = document.createElement("textarea"), this.fakeElem.style.fontSize = "12pt", this.fakeElem.style.border = "0", this.fakeElem.style.padding = "0", this.fakeElem.style.margin = "0", this.fakeElem.style.position = "absolute", this.fakeElem.style[n ? "right" : "left"] = "-9999px";
+                                        var i = window.pageYOffset || document.documentElement.scrollTop;
+                                        this.fakeElem.addEventListener("focus", window.scrollTo(0, i)), this.fakeElem.style.top = i + "px", this.fakeElem.setAttribute("readonly", ""), this.fakeElem.value = this.text, document.body.appendChild(this.fakeElem), this.selectedText = (0, o.default)(this.fakeElem), this.copyText()
+                                    }
+                                }, {
+                                    key: "removeFake",
+                                    value: function e() {
+                                        this.fakeHandler && (document.body.removeEventListener("click", this.fakeHandlerCallback), this.fakeHandler = null, this.fakeHandlerCallback = null), this.fakeElem && (document.body.removeChild(this.fakeElem), this.fakeElem = null)
+                                    }
+                                }, {
+                                    key: "selectTarget",
+                                    value: function e() {
+                                        this.selectedText = (0, o.default)(this.target), this.copyText()
+                                    }
+                                }, {
+                                    key: "copyText",
+                                    value: function e() {
+                                        var t = void 0;
+                                        try {
+                                            t = document.execCommand(this.action)
+                                        } catch (e) {
+                                            t = !1
+                                        }
+                                        this.handleResult(t)
+                                    }
+                                }, {
+                                    key: "handleResult",
+                                    value: function e(t) {
+                                        this.emitter.emit(t ? "success" : "error", {
+                                            action: this.action,
+                                            text: this.selectedText,
+                                            trigger: this.trigger,
+                                            clearSelection: this.clearSelection.bind(this)
+                                        })
+                                    }
+                                }, {
+                                    key: "clearSelection",
+                                    value: function e() {
+                                        this.target && this.target.blur(), window.getSelection().removeAllRanges()
+                                    }
+                                }, {
+                                    key: "destroy",
+                                    value: function e() {
+                                        this.removeFake()
+                                    }
+                                }, {
+                                    key: "action",
+                                    set: function e() {
+                                        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "copy";
+                                        if (this._action = t, "copy" !== this._action && "cut" !== this._action) throw new Error('Invalid "action" value, use either "copy" or "cut"')
+                                    },
+                                    get: function e() {
+                                        return this._action
+                                    }
+                                }, {
+                                    key: "target",
+                                    set: function e(t) {
+                                        if (void 0 !== t) {
+                                            if (!t || "object" !== ("undefined" == typeof t ? "undefined" : r(t)) || 1 !== t.nodeType) throw new Error('Invalid "target" value, use a valid Element');
+                                            if ("copy" === this.action && t.hasAttribute("disabled")) throw new Error('Invalid "target" attribute. Please use "readonly" instead of "disabled" attribute');
+                                            if ("cut" === this.action && (t.hasAttribute("readonly") || t.hasAttribute("disabled"))) throw new Error('Invalid "target" attribute. You can\'t cut text from elements with "readonly" or "disabled" attributes');
+                                            this._target = t
+                                        }
+                                    },
+                                    get: function e() {
+                                        return this._target
+                                    }
+                                }]), e
+                            }();
+                        e.exports = c
+                    })
+                }, {
+                    select: 5
+                }],
+                8: [function(t, n, i) {
+                    ! function(o, r) {
+                        if ("function" == typeof e && e.amd) e(["module", "./clipboard-action", "tiny-emitter", "good-listener"], r);
+                        else if ("undefined" != typeof i) r(n, t("./clipboard-action"), t("tiny-emitter"), t("good-listener"));
+                        else {
+                            var a = {
+                                exports: {}
+                            };
+                            r(a, o.clipboardAction, o.tinyEmitter, o.goodListener), o.clipboard = a.exports
+                        }
+                    }(this, function(e, t, n, i) {
+                        "use strict";
+
+                        function o(e) {
+                            return e && e.__esModule ? e : {
+                                default: e
+                            }
+                        }
+
+                        function r(e, t) {
+                            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+                        }
+
+                        function a(e, t) {
+                            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                            return !t || "object" != typeof t && "function" != typeof t ? e : t
+                        }
+
+                        function c(e, t) {
+                            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+                            e.prototype = Object.create(t && t.prototype, {
+                                constructor: {
+                                    value: e,
+                                    enumerable: !1,
+                                    writable: !0,
+                                    configurable: !0
+                                }
+                            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+                        }
+
+                        function l(e, t) {
+                            var n = "data-clipboard-" + e;
+                            if (t.hasAttribute(n)) return t.getAttribute(n)
+                        }
+                        var s = o(t),
+                            u = o(n),
+                            f = o(i),
+                            d = function() {
+                                function e(e, t) {
+                                    for (var n = 0; n < t.length; n++) {
+                                        var i = t[n];
+                                        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                                    }
+                                }
+                                return function(t, n, i) {
+                                    return n && e(t.prototype, n), i && e(t, i), t
+                                }
+                            }(),
+                            h = function(e) {
+                                function t(e, n) {
+                                    r(this, t);
+                                    var i = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+                                    return i.resolveOptions(n), i.listenClick(e), i
+                                }
+                                return c(t, e), d(t, [{
+                                    key: "resolveOptions",
+                                    value: function e() {
+                                        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                                        this.action = "function" == typeof t.action ? t.action : this.defaultAction, this.target = "function" == typeof t.target ? t.target : this.defaultTarget, this.text = "function" == typeof t.text ? t.text : this.defaultText
+                                    }
+                                }, {
+                                    key: "listenClick",
+                                    value: function e(t) {
+                                        var n = this;
+                                        this.listener = (0, f.default)(t, "click", function(e) {
+                                            return n.onClick(e)
+                                        })
+                                    }
+                                }, {
+                                    key: "onClick",
+                                    value: function e(t) {
+                                        var n = t.delegateTarget || t.currentTarget;
+                                        this.clipboardAction && (this.clipboardAction = null), this.clipboardAction = new s.default({
+                                            action: this.action(n),
+                                            target: this.target(n),
+                                            text: this.text(n),
+                                            trigger: n,
+                                            emitter: this
+                                        })
+                                    }
+                                }, {
+                                    key: "defaultAction",
+                                    value: function e(t) {
+                                        return l("action", t)
+                                    }
+                                }, {
+                                    key: "defaultTarget",
+                                    value: function e(t) {
+                                        var n = l("target", t);
+                                        if (n) return document.querySelector(n)
+                                    }
+                                }, {
+                                    key: "defaultText",
+                                    value: function e(t) {
+                                        return l("text", t)
+                                    }
+                                }, {
+                                    key: "destroy",
+                                    value: function e() {
+                                        this.listener.destroy(), this.clipboardAction && (this.clipboardAction.destroy(), this.clipboardAction = null)
+                                    }
+                                }]), t
+                            }(u.default);
+                        e.exports = h
+                    })
+                }, {
+                    "./clipboard-action": 7,
+                    "good-listener": 4,
+                    "tiny-emitter": 6
+                }]
+            }, {}, [8])(8)
+        });
+
+        (function() {
+            'use strict';
+            var SyfaroAPI, MinecraftAPI, baseURL;
+            baseURL = 'https://mcapi.us';
+            SyfaroAPI = (function() {
+                function SyfaroAPI() {}
+                SyfaroAPI.prototype.queryString = function(params) {
+                    var str, p;
+                    str = [];
+                    for (p in params) {
+                        if (params[p] === undefined) {
+                            continue
+                        }
+                        if (params.hasOwnProperty(p)) {
+                            str.push(encodeURIComponent(p) + '=' + encodeURIComponent(params[p]))
+                        }
+                    }
+                    return '?' + str.join('&')
+                };
+                SyfaroAPI.prototype.loadJSON = function(endpoint, params, callback) {
+                    var xhr, url;
+                    if (typeof(params) === 'function') {
+                        callback = params;
+                        params = {}
+                    }
+                    params = this.queryString(params);
+                    url = baseURL + endpoint + params;
+                    xhr = new XMLHttpRequest();
+                    xhr.onerror = function() {
+                        callback(!0)
+                    };
+                    xhr.onload = function() {
+                        var data;
+                        try {
+                            data = JSON.parse(xhr.responseText)
+                        } catch (e) {
+                            return callback(e)
+                        }
+                        if (data.status === 'error') {
+                            return callback(data.error)
+                        }
+                        callback(undefined, data)
+                    };
+                    xhr.open('GET', url, !0);
+                    xhr.send()
+                };
+                return SyfaroAPI
+            }());
+            MinecraftAPI = (function() {
+                var api;
+
+                function MinecraftAPI() {}
+                api = new SyfaroAPI();
+                MinecraftAPI.prototype.getServerStatus = function(ip, options, callback) {
+                    if (typeof(options) === 'function') {
+                        callback = options;
+                        options = {}
+                    }
+                    options.ip = ip;
+                    api.loadJSON('/server/status', options, callback)
+                };
+                MinecraftAPI.prototype.getServerStatus = MinecraftAPI.prototype.getServerStatus;
+                MinecraftAPI.prototype.getServerQuery = function(ip, options, callback) {
+                    if (typeof(options) === 'function') {
+                        callback = options;
+                        options = {}
+                    }
+                    options.ip = ip;
+                    api.loadJSON('/server/query', options, callback)
+                };
+                MinecraftAPI.prototype.getServerQuery = MinecraftAPI.prototype.getServerQuery;
+                return MinecraftAPI
+            }());
+            window.MinecraftAPI = new MinecraftAPI()
+        }());
+
+        if (server) {
+            var copy = new Clipboard('#copy');
+            copy.on('success', function(e) {
+                $('#copy .s-text').text('IP COPIED');
+                setTimeout(function() {
+                    $('#copy .s-text').text('CLICK TO COPY');
+                }, 2500);
+
+            });
+
+            function minecraft() {
+                MinecraftAPI.getServerStatus(server, {
+                    port: serverPort
+                }, function(err, status) {
+                    if (err) {
+                        $('#copy .count').text('0');
+                    } else {
+                        $('#copy .count').text(status.players.now);
+                    }
+                });
+            };
+            setTimeout(minecraft, 1500);
+        }
+
+        if (discord) {
+            $.get('https://discordapp.com/api/guilds/' + discord + '/embed.json', function(e) {
+                var players = e['presence_count'];
+                $('.discord .count').text(players);
+            });
+        }
+    </script>
+    <script>
+        jQuery(".card-container").eq(0).remove();
+    </script>
+    <script type="text/javascript" src="/assets/js/discord.js"></script>
+    <div id="waiting-overlay" style="display: none;">
+        <i class="fa fa-cog fa-spin fa-3x"></i>
+    </div>
+
+    <!--
+    Removal of the Tebex footer violates our Terms & Conditions.
+    Due to Tebex being the Merchant of Record, the footer is a contractual requirement by our payment processing partners such as VISA & Mastercard.
+    Any attempt to hide or make the inner text of the footer unreadable will result in an immediate lock of your store & available funds with no exceptions.
+    We perform random checks on all stores to ensure you are abiding by this requirement.
+    We’re happy for you to change the colors and max-width of the footer to suit your design requirements, which you can learn how to do so by reading the documentation available at https://docs.tebex.io/developers/templates/footer
+-->
+    <tebex-footer>
+        <template shadowrootmode="open">
+        <div class="tebex-footer-wrapper ">
+            <div class="tebex-footer-inner">
+                <div class="tebex-footer-image">
+                    <a href="https://www.tebex.io" target="_blank">
+                        <svg width="61" height="29" viewBox="0 0 61 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.22379 7.36903C8.42455 5.55275 10.5991 5.02655 10.5991 5.02655C10.5991 5.02655 6.44895 4.02049 6.44895 0C6.44895 4.02049 2.29644 5.02655 2.29644 5.02655C2.29644 5.02655 4.47176 5.55275 5.67331 7.36903H0V14.3322L1.28979 12.1758H3.86857V24.1932L9.02693 29V14.2859C7.71147 13.7208 5.8217 12.2842 5.14472 11.1885C6.30056 11.5136 7.85104 11.9411 9.05821 12.1766H12.8963V7.36903H7.22379Z" />
+                            <g clip-path="url(#clip0_995_406)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.9134 14.0983C36.5813 13.2542 37.62 12.7915 38.8665 12.7915H38.868C41.2702 12.7915 42.9475 14.4698 42.9475 16.8028C42.9475 19.1358 41.2194 20.8283 38.8357 20.8283C37.5616 20.8283 36.5474 20.3884 35.8888 19.5529L35.8457 20.6418H34.0253V9.87207H35.9134V14.0983ZM38.7342 19.3536C40.1961 19.3536 41.2163 18.3259 41.2163 16.8555C41.2163 15.3509 40.3084 14.3417 38.828 14.3417C37.3477 14.3417 36.3135 15.3381 36.3135 16.8555C36.3135 18.3728 37.2722 19.3536 38.7342 19.3536ZM22.7747 19.1045C22.3069 19.4347 21.9345 19.5628 21.4436 19.5628C20.7204 19.5628 20.3049 19.1557 20.3049 18.444V14.4271H23.3395V12.8812H20.3049V10.8742H18.4167V12.8798H17.1041L16.6763 14.4257H18.4167V18.4583C18.4167 20.2162 19.4277 21.1841 21.2651 21.1841C22.1038 21.1841 22.8517 20.945 23.5488 20.4525L23.5996 20.4169L22.8486 19.0518L22.7747 19.1031V19.1045ZM28.2885 12.7303C25.874 12.7303 24.1228 14.4242 24.1228 16.7572C24.1228 19.2127 25.7894 20.7984 28.367 20.7984C29.8396 20.7984 30.9399 20.3827 31.8263 19.4902L31.8725 19.4447L30.8707 18.3273L30.8107 18.3814C30.1197 19.0063 29.4057 19.2853 28.4916 19.2853C27.0574 19.2853 26.1756 18.5579 26.0017 17.2327H32.2049V17.1615C32.2049 17.0903 32.2079 17.0234 32.2125 16.9565C32.2172 16.8868 32.2202 16.817 32.2202 16.743C32.2202 14.3061 30.6768 12.7303 28.2885 12.7303ZM26.0402 16.0882C26.2803 14.9794 27.1482 14.2677 28.2731 14.2677C29.398 14.2677 30.1582 14.9295 30.3244 16.0882H26.0402ZM48.0719 12.7303C45.6575 12.7303 43.9062 14.4242 43.9062 16.7572C43.9062 19.2127 45.5728 20.7984 48.1504 20.7984C49.6231 20.7984 50.7234 20.3827 51.6097 19.4902L51.6559 19.4447L50.6541 18.3273L50.5941 18.3814C49.9032 19.0063 49.1891 19.2853 48.275 19.2853C46.8408 19.2853 45.9591 18.5579 45.7852 17.2327H51.9883V17.1615C51.9883 17.0903 51.9914 17.0234 51.996 16.9565C52.0006 16.8868 52.0037 16.817 52.0037 16.743C52.0037 14.3061 50.4602 12.7303 48.0719 12.7303ZM48.0565 14.2662C49.1984 14.2662 49.9416 14.9281 50.1078 16.0868H45.8237C46.0637 14.9779 46.9316 14.2662 48.0565 14.2662ZM60.2258 12.8798L57.2973 16.5708L60.5566 20.6418H58.313L56.2078 17.8633L54.1488 20.6418H52.016L55.1645 16.6733L52.1576 12.8798H54.4012L56.254 15.4078L58.0914 12.8798H60.2258Z" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_995_406">
+                                    <rect width="43.8803" height="11.3121" fill="white" transform="translate(16.6763 9.87207)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="tebex-footer-text">
+                    This website and its checkout process is owned &amp; operated by Tebex Limited, who handle product fulfilment, billing support and refunds.
+                </div>
+
+                <div class="tebex-footer-links">
+                    <a href="/terms/impressum">Impressum</a>
+                    <a href="/terms/checkout">Terms & Conditions</a>
+                    <a href="/terms/privacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <style>
+            :host {
+                all: unset !important;
+                zoom: 1 !important;
+                width: 100% !important;
+                min-height: 35px !important;
+                box-sizing: border-box !important;
+                z-index: 9999999999 !important;
+            }
+
+            :host([absolute]) {
+                position: absolute !important;
+                bottom: 0 !important;
+            }
+
+            * {
+                box-sizing: border-box !important;
+            }
+
+            .tebex-footer-wrapper {
+                all: unset !important;
+                display: flex !important;
+                width: 100% !important;
+                min-height: 35px !important;
+                padding: 2px 32px !important;
+                font-size: 11px !important;
+                font-weight: 400 !important;
+                font-family: Arial, sans-serif !important;
+                box-sizing: border-box !important;
+                --text: var(--tebex-legal-footer-text-color, #6a6a6a) !important;
+                --bg: var(--tebex-legal-footer-background-color, #fff) !important;
+                color: var(--text) !important; /* fallback */
+                color: rgb(from var(--text) r g b / 1) !important;
+                background-color: var(--bg) !important; /* fallback */
+                background-color: rgb(from var(--bg) r g b / 1) !important;
+                border-top: 1px solid var(--tebex-legal-footer-border-color, #efefef) !important;
+            }
+
+            .tebex-footer-wrapper-dark {
+                --text: var(--tebex-legal-footer-text-color, #b2b2b2) !important;
+                --bg: var(--tebex-legal-footer-background-color, #2e2e2e) !important;
+                border-color: var(--tebex-legal-footer-border-color, #404040) !important;
+            }
+
+            .tebex-footer-inner {
+                width: 100% !important;
+                height: 100% !important;
+                max-width: var(--tebex-legal-footer-max-width, 100%) !important; /* fallback */
+                max-width: max(var(--tebex-legal-footer-max-width, 100%), 320px) !important;
+                margin: 0 auto !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+                container-type: inline-size !important;
+            }
+
+            .tebex-footer-image {
+                padding-right: 32px !important;
+
+                svg path {
+                    fill: var(--tebex-legal-footer-logo-color, #9C9FA9) !important; 
+                }
+            }
+
+            .tebex-footer-text {
+                flex-grow: 1 !important;
+                padding-right: 32px !important;
+                color: inherit !important;
+                margin-top: 2px !important;
+            }
+
+            .tebex-footer-links {
+                margin-top: 2px !important;
+            }
+
+            .tebex-footer-links a {
+                color: inherit !important;
+                text-decoration: underline !important;
+            }
+
+            .tebex-footer-links > a:not(:last-child) {
+                margin-right: 12px !important;
+            }
+
+            @media screen and (max-width: 900px) {
+                .tebex-footer-wrapper {
+                    min-height: 70px !important;
+                    padding: 8px 16px !important;
+                    flex-wrap: wrap !important;
+                }
+
+                .tebex-footer-image {
+                    display: none !important;
+                }
+
+                .tebex-footer-links {
+                    margin-top: 4px !important;
+                    min-width: unset !important;
+                }
+            }
+
+            @container (max-width: 900px) {
+                .tebex-footer-image {
+                    display: none !important;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                .tebex-footer-wrapper{
+                    min-height: 80px !important;
+                    padding: 4px 16px !important;
+                }
+            }
+        </style>
+    </template>
+    </tebex-footer>
+
+    <script type="text/javascript">
+        (() => {
+
+            const notAllowed = () => {
+                const err = 'Removal of the Tebex footer violates our Terms & Conditions. Please refer to the documentation at https://docs.tebex.io/developers/templates/footer';
+                console.warn(err);
+            };
+
+            // Used to access DOM methods that are gated externally
+            const SHADOW_ROOT = Symbol();
+            const ATTACH_SHADOW = Symbol();
+            const QUERY_SELECTOR = Symbol();
+            const SET_ATTRIBUTE = Symbol();
+            const REMOVE_ATTRIBUTE = Symbol();
+            const GATE_ON = Symbol();
+
+            class TebexFooter extends HTMLElement {
+                constructor() {
+                    super();
+
+                    this[SHADOW_ROOT] = this.shadowRoot;
+                    this[ATTACH_SHADOW] = this.attachShadow;
+                    this[QUERY_SELECTOR] = this.querySelector;
+                    this[SET_ATTRIBUTE] = this.setAttribute;
+                    this[REMOVE_ATTRIBUTE] = this.removeAttribute;
+                    this[GATE_ON] = true;
+
+                    // Prevent shadow DOM access
+                    this.attachShadow = notAllowed;
+                    Object.defineProperty(this, 'shadowRoot', {
+                        get: () => null,
+                        set: notAllowed
+                    });
+
+                    // Polyfill for declarative shadow DOM
+                    if (!this[SHADOW_ROOT]) {
+                        const template = this[QUERY_SELECTOR]('template[shadowrootmode]');
+                        const mode = template.getAttribute('shadowrootmode');
+                        const shadowRoot = this[ATTACH_SHADOW]({
+                            mode
+                        });
+                        shadowRoot.appendChild(template.content);
+                        this[SHADOW_ROOT] = shadowRoot;
+                        template.remove();
+                    }
+
+                    // Warn against edits to internal shadow DOM content
+                    const observer = new MutationObserver((mutationList, observer) => {
+                        if (this[GATE_ON])
+                            notAllowed();
+                        this[GATE_ON] = true;
+                    });
+                    const observerConfig = {
+                        attributes: true,
+                        childList: true,
+                        characterData: true,
+                        subtree: true
+                    };
+                    observer.observe(this[SHADOW_ROOT], observerConfig);
+
+                    this.#reposition();
+
+                    document.addEventListener('DOMContentLoaded', () => {
+                        this.#reposition();
+                    });
+
+                    function debounce(func) {
+                        var timer;
+                        return function(event) {
+                            if (timer) clearTimeout(timer);
+                            timer = setTimeout(func, 100, event);
+                        };
+                    }
+
+                    addEventListener('resize', debounce(() => {
+                        this.#reposition();
+                    }));
+
+                    addEventListener('scroll', debounce(() => {
+                        this.#reposition();
+                    }));
+                }
+
+                disconnectedCallback() {
+                    notAllowed();
+                }
+
+                #
+                reposition() {
+                    this[GATE_ON] = false;
+                    if (document.body.clientHeight < (window.innerHeight - this.clientHeight))
+                        this[SET_ATTRIBUTE]('absolute', '');
+                    else
+                        this[REMOVE_ATTRIBUTE]('absolute');
+                }
+            }
+
+            customElements.define('tebex-footer', TebexFooter);
+        })();
+    </script>
+
+    <script type="text/javascript">
+        window.nSureAsyncInit = function(deviceId) {
+            window.nSureSDK.init({
+                appId: 'Z620Q2525RT9DWKA',
+                storeInfo: {
+                    id: '1475332',
+                    type: 'storeFront'
+                }
+            });
+
+            document.cookie = "deviceId=" + deviceId + "; path=/";
+
+        }
+    </script>
+    <script type="text/javascript" src="https://nsure.tebex.io/sdk.js">
+    </script>
+</body>
+
+</html>
