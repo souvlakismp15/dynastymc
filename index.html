@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="07GTXmKC1tme7UkTSxE0HI7fAMsBsgmF1Kj5eC6r">
+
+    <title>
+        Tropix Bots
+    </title>
+
+
+    <link rel="preload" as="style" href="https://billing.tropixbots.xyz/veltrixv2/assets/app-Dz3tNVGX.css" />
+    <link rel="modulepreload" href="https://billing.tropixbots.xyz/veltrixv2/assets/app-Djn-PJ7E.js" />
+    <link rel="stylesheet" href="https://billing.tropixbots.xyz/veltrixv2/assets/app-Dz3tNVGX.css" data-navigate-track="reload" />
+    <script type="module" src="https://billing.tropixbots.xyz/veltrixv2/assets/app-Djn-PJ7E.js" data-navigate-track="reload"></script>
+    <style>
+        :root {
+            /* Branding Colors (Light) */
+            --color-primary: 116 100% 33%;
+            --color-secondary: 118 98% 26%;
+            /* Neutral Colors - Borders, Accents... (Light) */
+            --color-neutral: 220 25% 85%;
+            /* Text Colors (Light) */
+            --color-base: 116 100% 33%;
+            --color-muted: 220 2% 76%;
+            --color-inverted: 100 100% 100%;
+            /* State Colors */
+            --color-success: 142 71% 45%;
+            --color-error: 0 75% 60%;
+            --color-warning: 25 95% 53%;
+            --color-inactive: 0 0% 63%;
+            --color-info: 210 100% 60%;
+            /* Background Colors (Light) */
+            --color-background: 100 100% 100%;
+            --color-background-secondary: 0 0% 97%;
+        }
+
+        .dark {
+            /* Branding Colors (Dark) */
+            --color-primary: 116 100% 33%;
+            --color-secondary: 118 98% 26%;
+            /* Neutral Colors - Borders, Accents... (Dark) */
+            --color-neutral: 260 4% 14%;
+            /* Text Colors (Dark) */
+            --color-base: 100 100% 100%;
+            --color-muted: 220 0% 100%;
+            --color-inverted: 220 3% 76%;
+            /* Background Colors (Dark) */
+            --color-background: 240 10% 4%;
+            --color-background-secondary: 270 4% 10%;
+        }
+    </style>
+
+    <link rel="icon" href="/storage/logo.webp" type="image/png">
+
+
+
+
+
+
+
+    <meta name="robots" content="index, follow">
+
+
+    <meta name="theme-color" content="hsl(116, 100%, 33%)">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tropix Bots">
+
+
+    <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+    <!-- Livewire Styles -->
+    <style>
+        [wire\:loading][wire\:loading],
+        [wire\:loading\.delay][wire\:loading\.delay],
+        [wire\:loading\.inline-block][wire\:loading\.inline-block],
+        [wire\:loading\.inline][wire\:loading\.inline],
+        [wire\:loading\.block][wire\:loading\.block],
+        [wire\:loading\.flex][wire\:loading\.flex],
+        [wire\:loading\.table][wire\:loading\.table],
+        [wire\:loading\.grid][wire\:loading\.grid],
+        [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {
+            display: none;
+        }
+
+        [wire\:loading\.delay\.none][wire\:loading\.delay\.none],
+        [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest],
+        [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter],
+        [wire\:loading\.delay\.short][wire\:loading\.delay\.short],
+        [wire\:loading\.delay\.default][wire\:loading\.delay\.default],
+        [wire\:loading\.delay\.long][wire\:loading\.delay\.long],
+        [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer],
+        [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {
+            display: none;
+        }
+
+        [wire\:offline][wire\:offline] {
+            display: none;
+        }
+
+        [wire\:dirty]:not(textarea):not(input):not(select) {
+            display: none;
+        }
+
+        :root {
+            --livewire-progress-bar-color: hsl(var(--color-primary));
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+
+        [wire\:cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+
+<body class="w-full bg-background text-base min-h-screen flex flex-col antialiased" x-cloak x-data="{darkMode: $persist(window.matchMedia('(prefers-color-scheme: dark)').matches)}" :class="{'dark': darkMode}">
+
+    <!-- Default Header -->
+    <nav class="w-full md:px-4 bg-background-secondary border-b border-neutral md:h-14 flex md:flex-row flex-col justify-between fixed top-0 z-20">
+        <div x-data="{ slideOverOpen: false, shortcutOpen: false }" x-init="$watch('slideOverOpen', value => { document.documentElement.style.overflow = value ? 'hidden' : '' })" class="relative z-50 w-full h-auto">
+            <div class="flex flex-row items-center justify-between h-14 px-4">
+                <div class="flex flex-row items-center">
+                    <button @click="slideOverOpen=true" class="flex md:hidden w-10 h-10 items-center justify-center rounded-lg hover:bg-neutral transition">
+                        <svg class="size-5 text-base" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"/></svg>                    </button>
+                    <a href="https://billing.tropixbots.xyz" class="flex flex-row items-center" wire:navigate>
+                        <img src="/storage/logo.webp" alt="Tropix Bots" class="h-12 w-auto inline-block" />
+                                                    <span class="text-xl text-base ml-2 font-bold">Tropix Bots</span>
+                                            </a>
+
+                    <div class="md:flex hidden flex-row ml-7">
+                        <a href="https://billing.tropixbots.xyz" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80 flex items-center p-3 text-base hover:text-base/80" wire:navigate>
+    Home
+</a>
+                        <div class="relative">
+                            <div class="relative" x-data="{ open: false, adjustWidth: 0 }" x-init="$watch('open', value => {
+    if (value) {
+        adjustWidth = 0; // Reset adjustWidth when opening
+        $nextTick(() => {
+            let dropdown = $refs.dropdown;
+            let rect = dropdown.getBoundingClientRect();
+            let windowWidth = window.innerWidth;
+            adjustWidth = rect.right > windowWidth ? rect.width - 40 : 0;
+        });
+    }
+})">
+
+                                <button class="flex flex-row items-center px-2 py-1 text-sm font-semibold whitespace-nowrap text-base hover:text-base/80" x-on:click="open = !open">
+        <div class="flex flex-col">
+                                                <span class="flex flex-row items-center p-3 text-sm font-semibold text-base hover:text-base/80">
+                                                    Shop
+                                                </span>
+                                            </div>
+        <svg x-bind:class="{ '-rotate-180' : open }" class="md:block hidden size-4 text-base ease-out duration-300" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>    </button>
+
+                                <div x-ref="dropdown" class="absolute mt-2 w-48 px-2 py-1 bg-background-secondary rounded-md shadow-lg z-10 border border-neutral" x-bind:style="{
+            left: `-${adjustWidth}px`,
+        }" x-show="open" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="opacity-100 scale-100"
+                                    x-transition:leave-end="opacity-0 scale-90" x-on:click.outside="open = false" x-cloak>
+                                    <a href="https://billing.tropixbots.xyz/products/discord-bot-hosting" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80" wire:navigate>
+    Discord Bot Hosting
+</a>
+                                    <a href="https://billing.tropixbots.xyz/products/premade-discord-bots" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80" wire:navigate>
+    Premade Discord Bots
+</a>
+                                    <a href="https://billing.tropixbots.xyz/products/custom-discord-bots" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80" wire:navigate>
+    Custom Discord Bots
+</a>
+                                    <a href="https://billing.tropixbots.xyz/products/web-hosting" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80" wire:navigate>
+    Web Hosting
+</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center space-x-4">
+                    <div class="items-center hidden md:flex space-x-2">
+                        <div class="relative" x-data="{ open: false, adjustWidth: 0 }" x-init="$watch('open', value => {
+    if (value) {
+        adjustWidth = 0; // Reset adjustWidth when opening
+        $nextTick(() => {
+            let dropdown = $refs.dropdown;
+            let rect = dropdown.getBoundingClientRect();
+            let windowWidth = window.innerWidth;
+            adjustWidth = rect.right > windowWidth ? rect.width - 40 : 0;
+        });
+    }
+})">
+
+                            <button class="flex flex-row items-center px-2 py-1 text-sm font-semibold whitespace-nowrap text-base hover:text-base/80" x-on:click="open = !open">
+        <div class="flex flex-row items-center space-x-2 cursor-pointer select-none">
+                    
+                    <span class="text-sm font-semibold text-base flex items-center">
+                        <img src="https://flagcdn.com/w20/us.png" alt="flag" class="w-5 h-auto mr-2 rounded-sm border border-base/20" />
+                        EN <span class="text-base/50 mx-1">|</span> EUR
+                    </span>
+                </div>
+        <svg x-bind:class="{ '-rotate-180' : open }" class="md:block hidden size-4 text-base ease-out duration-300" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>    </button>
+
+                            <div x-ref="dropdown" class="absolute mt-2 w-48 px-2 py-1 bg-background-secondary rounded-md shadow-lg z-10 border border-neutral" x-bind:style="{
+            left: `-${adjustWidth}px`,
+        }" x-show="open" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="opacity-100 scale-100"
+                                x-transition:leave-end="opacity-0 scale-90" x-on:click.outside="open = false" x-cloak>
+                                <strong class="block p-2 text-xs font-semibold uppercase text-base/50">Language</strong>
+                                <div wire:snapshot="{&quot;data&quot;:{&quot;currentLocale&quot;:&quot;en&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;abfkcIZpVM13I2LUoXe1&quot;,&quot;name&quot;:&quot;components.language-switch&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;b631a625020074c70361b4db03bdf99a136764b8a6af9aa5e5c0c45eb9e1c15a&quot;}"
+                                    wire:effects="[]" wire:id="abfkcIZpVM13I2LUoXe1" x-data="{
+        selectOpen: false,
+        selectedValue: window.Livewire.find('abfkcIZpVM13I2LUoXe1').entangle('currentLocale').live,
+        selectableItems: [{&quot;value&quot;:&quot;ar&quot;,&quot;label&quot;:&quot;Arabic&quot;},{&quot;value&quot;:&quot;de&quot;,&quot;label&quot;:&quot;German&quot;},{&quot;value&quot;:&quot;en&quot;,&quot;label&quot;:&quot;English&quot;},{&quot;value&quot;:&quot;es&quot;,&quot;label&quot;:&quot;Spanish&quot;},{&quot;value&quot;:&quot;fi&quot;,&quot;label&quot;:&quot;Finnish&quot;},{&quot;value&quot;:&quot;fr&quot;,&quot;label&quot;:&quot;French&quot;},{&quot;value&quot;:&quot;it&quot;,&quot;label&quot;:&quot;Italian&quot;},{&quot;value&quot;:&quot;sv&quot;,&quot;label&quot;:&quot;Swedish&quot;},{&quot;value&quot;:&quot;uk&quot;,&quot;label&quot;:&quot;Ukrainian&quot;},{&quot;value&quot;:&quot;ko&quot;,&quot;label&quot;:&quot;Korean&quot;},{&quot;value&quot;:&quot;lv&quot;,&quot;label&quot;:&quot;Latvian&quot;},{&quot;value&quot;:&quot;nl&quot;,&quot;label&quot;:&quot;Dutch&quot;},{&quot;value&quot;:&quot;no&quot;,&quot;label&quot;:&quot;Norwegian&quot;},{&quot;value&quot;:&quot;pt&quot;,&quot;label&quot;:&quot;Portuguese&quot;},{&quot;value&quot;:&quot;sr&quot;,&quot;label&quot;:&quot;Serbian&quot;}],
+        selectableItemActive: null,
+        selectId: $id('select'),
+        selectDropdownPosition: 'bottom',
+
+        init() {
+            this.$watch('selectOpen', () => {
+                if (this.selectOpen) {
+                    this.selectableItemActive = this.selectableItems.find(item => item.value === this.selectedValue) 
+                        || this.selectableItems[0];
+                    this.$nextTick(() => this.selectScrollToActiveItem());
+                }
+                this.selectPositionUpdate();
+            });
+
+            window.addEventListener('resize', () => this.selectPositionUpdate());
+        },
+
+        selectableItemIsActive(item) {
+            return this.selectableItemActive && this.selectableItemActive.value === item.value;
+        },
+
+        selectableItemActiveNext() {
+            let index = this.selectableItems.indexOf(this.selectableItemActive);
+            if (index < this.selectableItems.length - 1) {
+                this.selectableItemActive = this.selectableItems[index + 1];
+                this.selectScrollToActiveItem();
+            }
+        },
+
+        selectableItemActivePrevious() {
+            let index = this.selectableItems.indexOf(this.selectableItemActive);
+            if (index > 0) {
+                this.selectableItemActive = this.selectableItems[index - 1];
+                this.selectScrollToActiveItem();
+            }
+        },
+
+        selectScrollToActiveItem() {
+            if (this.selectableItemActive) {
+                const activeElement = document.getElementById(this.selectableItemActive.value + '-' + this.selectId);
+                if (activeElement) {
+                    activeElement.scrollIntoView({ block: 'nearest' });
+                }
+            }
+        },
+
+        selectPositionUpdate() {
+            const selectDropdownBottomPos = this.$refs.selectButton.getBoundingClientRect().top + 
+                this.$refs.selectButton.offsetHeight + 
+                this.$refs.selectableItemsList.offsetHeight;
+            
+            this.selectDropdownPosition = window.innerHeight < selectDropdownBottomPos ? 'top' : 'bottom';
+        }
+    }" @keydown.escape="selectOpen = false" @keydown.down.prevent="if(selectOpen) { selectableItemActiveNext() } else { selectOpen = true }" @keydown.up.prevent="if(selectOpen) { selectableItemActivePrevious() } else { selectOpen = true }" @keydown.enter.prevent="selectedValue = selectableItemActive.value; selectOpen = false"
+                                    class="relative w-full">
+                                    <button x-ref="selectButton" @click="selectOpen = !selectOpen" :class="{ 'ring-2 ring-offset-2 ring-neutral-800': selectOpen }" class="relative w-full min-h-[38px] py-2 pl-3 pr-10 text-left bg-background-secondary border border-neutral rounded-md shadow-sm cursor-pointer text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-800"
+                                        type="button">
+        <span x-text="selectableItems.find(item => item.value === selectedValue)?.label ?? 'Select language'" class="block truncate"></span>
+        <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+            <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.2072 9.0428 12.0001 2.83569 5.793 9.0428 7.20721 10.457 12.0001 5.66412 16.793 10.457 18.2072 9.0428ZM5.79285 14.9572 12 21.1643 18.2071 14.9572 16.7928 13.543 12 18.3359 7.20706 13.543 5.79285 14.9572Z"/></svg>        </span>
+    </button>
+
+                                    <ul x-show="selectOpen" x-ref="selectableItemsList" @click.away="selectOpen = false" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" :class="{ 'bottom-full mb-1': selectDropdownPosition === 'top', 'top-full mt-1': selectDropdownPosition === 'bottom' }"
+                                        class="absolute z-50 w-full py-1 overflow-auto bg-background-secondary border border-neutral rounded-lg shadow-lg max-h-60 focus:outline-none text-sm" x-cloak>
+                                        <template x-for="item in selectableItems" :key="item.value">
+            <li
+                :id="item.value + '-' + selectId"
+                @click="selectedValue = item.value; selectOpen = false"
+                @mousemove="selectableItemActive = item"
+                :class="{ 'bg-neutral-700': selectableItemIsActive(item) }"
+                class="relative py-2 pl-8 pr-4 cursor-pointer select-none hover:bg-neutral-700"
+            >
+                <span 
+                    class="block truncate"
+                    :class="{ 'font-semibold': item.value === selectedValue }"
+                    x-text="item.label"
+                ></span>
+                <span
+                    x-show="item.value === selectedValue"
+                    class="absolute inset-y-0 left-0 flex items-center pl-2 text-neutral-400"
+                >
+                    <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z"/></svg>                </span>
+            </li>
+        </template>
+                                    </ul>
+                                </div>
+                                <div wire:snapshot="{&quot;data&quot;:{&quot;currentCurrency&quot;:&quot;EUR&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;J4XBD3Tcf8fmySWHwsTd&quot;,&quot;name&quot;:&quot;components.currency-switch&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;d38e3d54081b8d6e3a316bfb79f6d3950afe231c7dd63a6de59af68c735403e4&quot;}"
+                                    wire:effects="[]" wire:id="J4XBD3Tcf8fmySWHwsTd"></div>
+                            </div>
+                        </div>
+                        <!-- Dark Mode Toggle Button -->
+                        <!-- I sadly removed the easter egg (made it 500 clicks :) -->
+                        <button @click="handleDarkModeToggle()" type="button" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-neutral transition" x-data="{
+        clickHistory: [],
+        handleDarkModeToggle() {
+            this.darkMode = !this.darkMode;
+            // Track clicks
+            this.clickHistory.push(Date.now());
+            // Keep only clicks from last 2 seconds
+            this.clickHistory = this.clickHistory.filter(t => Date.now() - t < 2000);
+            // If 5 clicks in 2 seconds, show Easter egg
+            if (this.clickHistory.length >= 5000000) {
+                window.showDarkModeEasterEgg();
+                this.clickHistory = [];
+            }
+        }
+    }">
+    <template x-if="!darkMode">
+        <svg class="size-5 text-base" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>    </template>
+    <template x-if="darkMode">
+        <svg class="size-5 text-base" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.3807 2.01886C9.91573 3.38768 9 5.3369 9 7.49999C9 11.6421 12.3579 15 16.5 15C18.6631 15 20.6123 14.0843 21.9811 12.6193C21.6613 17.8537 17.3149 22 12 22C6.47715 22 2 17.5228 2 12C2 6.68514 6.14629 2.33869 11.3807 2.01886Z"/></svg>    </template>
+</button>
+
+                        <!-- Easter Egg Script -->
+                        <script>
+                            // Make function globally available
+                            window.showDarkModeEasterEgg = function() {
+                                // Check if popup already exists
+                                if (document.getElementById('darkmode-easter-egg-overlay')) return;
+
+                                // Create overlay
+                                const overlay = document.createElement('div');
+                                overlay.id = 'darkmode-easter-egg-overlay';
+                                overlay.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+
+                                // Create popup
+                                const popup = document.createElement('div');
+                                popup.className = 'bg-background dark:bg-background-dark rounded-lg shadow-xl p-6 max-w-md w-full mx-4 border border-gray-200 dark:border-gray-700';
+
+                                const messages = [
+                                    "Whoa there! Enjoying the light show?",
+                                    "Toggle much? Here's a cookie 🍪",
+                                    "Day... night... day... night... make up your mind!",
+                                    "You've unlocked: Professional Theme Tosser",
+                                    "Congratulations! You've discovered the secret theme-stress-test mode!"
+                                ];
+                                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                                const isDarkMode = document.documentElement.classList.contains('dark');
+
+                                popup.innerHTML = `
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-primary dark:text-primary-dark">Theme Toggler Extraordinaire!</h3>
+                <button id="close-easter-egg-x" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="text-foreground dark:text-foreground-dark">
+                <p>${randomMessage}</p>
+                <div class="mt-4 flex justify-center">
+                    <span class="text-4xl">${isDarkMode ? '🌙' : '☀️'}</span>
+                </div>
+                <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                    You clicked the theme toggle 5 times in 2 seconds!
+                </div>
+            </div>
+            <div class="mt-6 flex justify-end">
+                <button id="close-easter-egg-btn" class="px-4 py-2 bg-primary dark:bg-primary-dark text-white rounded hover:bg-opacity-90 transition">
+                    Close
+                </button>
+            </div>
+        `;
+
+                                overlay.appendChild(popup);
+                                document.body.appendChild(overlay);
+
+                                // Add event listeners for close buttons
+                                document.getElementById('close-easter-egg-x').addEventListener('click', function() {
+                                    document.getElementById('darkmode-easter-egg-overlay').remove();
+                                });
+
+                                document.getElementById('close-easter-egg-btn').addEventListener('click', function() {
+                                    document.getElementById('darkmode-easter-egg-overlay').remove();
+                                });
+                            }
+                        </script>
+                    </div>
+
+                    <div wire:snapshot="{&quot;data&quot;:{&quot;cartCount&quot;:0},&quot;memo&quot;:{&quot;id&quot;:&quot;MZ298Tls0RocoQEadNN6&quot;,&quot;name&quot;:&quot;components.cart&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;a28834577e58fb6cf4ac3d8613337ceb1a9f52e6a77a5030142243dfd0bbeaf4&quot;}"
+                        wire:effects="{&quot;listeners&quot;:[&quot;cartUpdated&quot;]}" wire:id="MZ298Tls0RocoQEadNN6"></div>
+                    <div class="flex flex-row space-x-4">
+                        <a href="https://billing.tropixbots.xyz/login" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80 text-base hover:text-base/80" wire:navigate>
+    Login
+</a>
+                        <a href="https://billing.tropixbots.xyz/register" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80" wire:navigate>
+    <button
+    class="bg-primary text-white font-semibold hover:bg-primary/80 py-2 px-4 rounded-md w-full duration-300 cursor-pointer bg-gray-600 hover:bg-gray-700 text-white">
+
+            Register
+    </button>
+
+<style>
+:root {
+    --primary: hsl(116, 100%, 33%);
+    --secondary: hsl(118, 98%, 26%);
+    --neutral: hsl(220, 25%, 85%);
+    --base: hsl(116, 100%, 33%);
+    --muted: hsl(220, 2%, 76%);
+    --inverted: hsl(100, 100%, 100%);
+    --background: hsl(100, 100%, 100%);
+    --background-secondary: hsl(0, 0%, 97%);
+    --dark-primary: hsl(116, 100%, 33%);
+    --dark-secondary: hsl(118, 98%, 26%);
+    --dark-neutral: hsl(260, 4%, 14%);
+    --dark-base: hsl(100, 100%, 100%);
+    --dark-muted: hsl(220, 0%, 100%);
+    --dark-inverted: hsl(220, 3%, 76%);
+    --dark-background: hsl(240, 10%, 4%);
+    --dark-background-secondary: hsl(270, 4%, 10%);
+}
+
+/* Gradient Button */
+.gradient-button {
+    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    transition: background 0.3s ease;
+}
+
+.gradient-button:hover {
+    background: linear-gradient(to bottom right, var(--dark-primary), var(--dark-secondary));
+}
+</style>
+</a>
+                    </div>
+                </div>
+
+                <!-- Shortcut Help Menu -->
+                <div x-show="shortcutOpen" x-transition class="fixed top-0 right-0 mt-16 mr-4 bg-background-secondary text-base shadow-lg p-4 rounded-md z-50 border border-neutral">
+                    <h3 class="text-lg font-bold">Keyboard Shortcuts</h3>
+                    <ul class="space-y-2 mt-2">
+                        <li><span class="font-semibold">Account:</span> <kbd class="bg-neutral px-2 py-1 rounded">Alt + A</kbd></li>
+                        <li><span class="font-semibold">Tickets:</span> <kbd class="bg-neutral px-2 py-1 rounded">Alt + T</kbd></li>
+                        <li><span class="font-semibold">Dashboard:</span> <kbd class="bg-neutral px-2 py-1 rounded">Alt + D</kbd></li>
+                        <li><span class="font-semibold">Logout:</span> <kbd class="bg-neutral px-2 py-1 rounded">Alt + L</kbd></li>
+                        <li><span class="font-semibold">Home:</span> <kbd class="bg-neutral px-2 py-1 rounded">Alt + H</kbd></li>
+                    </ul>
+                    <button @click="shortcutOpen = false" class="mt-4 bg-red-500/90 text-white rounded-md px-4 py-2">Close</button>
+                </div>
+                <template x-teleport="body">
+                <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false" class="relative z-[99]">
+                    <div x-show="slideOverOpen" x-transition.opacity.duration.600ms @click="slideOverOpen = false" class="fixed inset-0 bg-primary/20"></div>
+                    <div class="fixed inset-0 overflow-hidden">
+                        <div class="absolute inset-0 overflow-hidden">
+                            <div class="fixed inset-y-0 left-0 flex max-w-full pr-44">
+                                <div x-show="slideOverOpen"
+                                     @click.away="slideOverOpen = false"
+                                     x-transition:enter="transform transition ease-in-out duration-500"
+                                     x-transition:enter-start="-translate-x-full"
+                                     x-transition:enter-end="translate-x-0"
+                                     x-transition:leave="transform transition ease-in-out duration-500"
+                                     x-transition:leave-start="translate-x-0"
+                                     x-transition:leave-end="-translate-x-full"
+                                     class="w-screen max-w-full">
+                                    <div class="flex flex-col h-full bg-background-secondary border-r border-neutral shadow-lg">
+                                        <div class="px-4 sm:px-5">
+                                            <div class="flex items-center justify-between pb-1">
+                                                <div class="flex flex-row items-center justify-between h-14 px-4">
+                                                    <a href="https://billing.tropixbots.xyz" class="flex flex-row items-center" wire:navigate>
+                                                        <img src="/storage/logo.webp" alt="Tropix Bots" class="h-12 w-auto inline-block" />
+                                                        <span class="text-xl text-base ml-2 font-bold">Tropix Bots</span>
+                                                    </a>
+                                                </div>
+                                                <div class="flex items-center ml-3">
+                                                    <button @click="slideOverOpen=false" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-neutral transition">
+                                                        <svg class="size-5 text-base" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"/></svg>                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="relative flex-1 px-4 mt-5 sm:px-5">
+                                            <div class="absolute inset-0 px-4 sm:px-5">
+                                                <div class="relative h-full overflow-hidden">
+                                                    <div class="lg:px-4 lg:py-6 flex flex-col gap-2">
+    <div class="flex flex-col gap-2 md:hidden">
+                        <div class="flex items-center rounded-lg bg-primary/5">
+            <a href="https://billing.tropixbots.xyz" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80 w-full"  wire:navigate >
+    <svg class="size-5 text-primary" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20Z"/></svg>                                Home
+</a>
+        </div>
+                                        <div x-data="{ activeAccordion: false }"
+            class="relative w-full mx-auto overflow-hidden text-sm font-normal divide-y divide-gray-200">
+            <div class="cursor-pointer">
+                <button @click="activeAccordion = !activeAccordion"
+                    class="flex items-center justify-between w-full p-3 text-sm font-semibold whitespace-nowrap rounded-lg hover:bg-primary/5">
+                    <div class="flex flex-row gap-2">
+                                                    <svg class="size-5 fill-base/50" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.00488 7.99966V5.99966C7.00488 3.23824 9.24346 0.999664 12.0049 0.999664C14.7663 0.999664 17.0049 3.23824 17.0049 5.99966V7.99966H20.0049C20.5572 7.99966 21.0049 8.44738 21.0049 8.99966V20.9997C21.0049 21.5519 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.5519 3.00488 20.9997V8.99966C3.00488 8.44738 3.4526 7.99966 4.00488 7.99966H7.00488ZM7.00488 9.99966H5.00488V19.9997H19.0049V9.99966H17.0049V11.9997H15.0049V9.99966H9.00488V11.9997H7.00488V9.99966ZM9.00488 7.99966H15.0049V5.99966C15.0049 4.34281 13.6617 2.99966 12.0049 2.99966C10.348 2.99966 9.00488 4.34281 9.00488 5.99966V7.99966Z"/></svg>                                                <span>Shop</span>
+                    </div>
+                    <svg x-bind:class="{ 'rotate-180': activeAccordion }" class="size-4 text-base ease-out duration-300" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>                </button>
+                <div x-show="activeAccordion" x-collapse x-cloak>
+                    <div class="p-4 pt-0 opacity-70">
+                                                <div class="flex items-center space-x-2">
+                            <a href="https://billing.tropixbots.xyz/products/discord-bot-hosting" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80"  wire:navigate >
+    Discord Bot Hosting
+</a>
+                        </div>
+                                                <div class="flex items-center space-x-2">
+                            <a href="https://billing.tropixbots.xyz/products/premade-discord-bots" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80"  wire:navigate >
+    Premade Discord Bots
+</a>
+                        </div>
+                                                <div class="flex items-center space-x-2">
+                            <a href="https://billing.tropixbots.xyz/products/custom-discord-bots" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80"  wire:navigate >
+    Custom Discord Bots
+</a>
+                        </div>
+                                                <div class="flex items-center space-x-2">
+                            <a href="https://billing.tropixbots.xyz/products/web-hosting" class="flex flex-row items-center p-3 gap-2 text-sm font-semibold text-wrap text-base hover:text-base/80"  wire:navigate >
+    Web Hosting
+</a>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+                        <div class="h-px w-full bg-neutral"></div>
+                    </div>
+
+    <div class="flex flex-col gap-2">
+                <div class="flex flex-row items-center mt-4 justify-between md:hidden">
+            <div class="relative" x-data="{ open: false, adjustWidth: 0 }" x-init="$watch('open', value => {
+    if (value) {
+        adjustWidth = 0; // Reset adjustWidth when opening
+        $nextTick(() => {
+            let dropdown = $refs.dropdown;
+            let rect = dropdown.getBoundingClientRect();
+            let windowWidth = window.innerWidth;
+            adjustWidth = rect.right > windowWidth ? rect.width - 40 : 0;
+        });
+    }
+})">
+
+    <button
+        class="flex flex-row items-center px-2 py-1 text-sm font-semibold whitespace-nowrap text-base hover:text-base/80"
+        x-on:click="open = !open">
+        <div class="flex flex-col">
+                        <span class="text-sm text-base font-semibold text-nowrap">EN <span class="text-base/50 font-semibold">|</span> EUR</span>
+                    </div>
+        <svg x-bind:class="{ '-rotate-180' : open }" class="md:block hidden size-4 text-base ease-out duration-300" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>    </button>
+
+    <div x-ref="dropdown"
+        class="absolute mt-2 w-48 px-2 py-1 bg-background-secondary rounded-md shadow-lg z-10 border border-neutral"
+        x-bind:style="{
+            left: `-${adjustWidth}px`,
+        }"
+        x-show="open"
+        x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+        x-on:click.outside="open = false" x-cloak>
+        <strong class="block p-2 text-xs font-semibold uppercase text-base/50"> Language </strong>
+                    <div wire:snapshot="{&quot;data&quot;:{&quot;currentLocale&quot;:&quot;en&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;HY52FJqO2tA12HHx5Sku&quot;,&quot;name&quot;:&quot;components.language-switch&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;962486e41da5cfe45fb42fc2325bcf29a464956a3b35432a67726d56adc3383f&quot;}" wire:effects="[]" wire:id="HY52FJqO2tA12HHx5Sku"
+    x-data="{
+        selectOpen: false,
+        selectedValue: window.Livewire.find('HY52FJqO2tA12HHx5Sku').entangle('currentLocale').live,
+        selectableItems: [{&quot;value&quot;:&quot;ar&quot;,&quot;label&quot;:&quot;Arabic&quot;},{&quot;value&quot;:&quot;de&quot;,&quot;label&quot;:&quot;German&quot;},{&quot;value&quot;:&quot;en&quot;,&quot;label&quot;:&quot;English&quot;},{&quot;value&quot;:&quot;es&quot;,&quot;label&quot;:&quot;Spanish&quot;},{&quot;value&quot;:&quot;fi&quot;,&quot;label&quot;:&quot;Finnish&quot;},{&quot;value&quot;:&quot;fr&quot;,&quot;label&quot;:&quot;French&quot;},{&quot;value&quot;:&quot;it&quot;,&quot;label&quot;:&quot;Italian&quot;},{&quot;value&quot;:&quot;sv&quot;,&quot;label&quot;:&quot;Swedish&quot;},{&quot;value&quot;:&quot;uk&quot;,&quot;label&quot;:&quot;Ukrainian&quot;},{&quot;value&quot;:&quot;ko&quot;,&quot;label&quot;:&quot;Korean&quot;},{&quot;value&quot;:&quot;lv&quot;,&quot;label&quot;:&quot;Latvian&quot;},{&quot;value&quot;:&quot;nl&quot;,&quot;label&quot;:&quot;Dutch&quot;},{&quot;value&quot;:&quot;no&quot;,&quot;label&quot;:&quot;Norwegian&quot;},{&quot;value&quot;:&quot;pt&quot;,&quot;label&quot;:&quot;Portuguese&quot;},{&quot;value&quot;:&quot;sr&quot;,&quot;label&quot;:&quot;Serbian&quot;}],
+        selectableItemActive: null,
+        selectId: $id('select'),
+        selectDropdownPosition: 'bottom',
+
+        init() {
+            this.$watch('selectOpen', () => {
+                if (this.selectOpen) {
+                    this.selectableItemActive = this.selectableItems.find(item => item.value === this.selectedValue) 
+                        || this.selectableItems[0];
+                    this.$nextTick(() => this.selectScrollToActiveItem());
+                }
+                this.selectPositionUpdate();
+            });
+
+            window.addEventListener('resize', () => this.selectPositionUpdate());
+        },
+
+        selectableItemIsActive(item) {
+            return this.selectableItemActive && this.selectableItemActive.value === item.value;
+        },
+
+        selectableItemActiveNext() {
+            let index = this.selectableItems.indexOf(this.selectableItemActive);
+            if (index < this.selectableItems.length - 1) {
+                this.selectableItemActive = this.selectableItems[index + 1];
+                this.selectScrollToActiveItem();
+            }
+        },
+
+        selectableItemActivePrevious() {
+            let index = this.selectableItems.indexOf(this.selectableItemActive);
+            if (index > 0) {
+                this.selectableItemActive = this.selectableItems[index - 1];
+                this.selectScrollToActiveItem();
+            }
+        },
+
+        selectScrollToActiveItem() {
+            if (this.selectableItemActive) {
+                const activeElement = document.getElementById(this.selectableItemActive.value + '-' + this.selectId);
+                if (activeElement) {
+                    activeElement.scrollIntoView({ block: 'nearest' });
+                }
+            }
+        },
+
+        selectPositionUpdate() {
+            const selectDropdownBottomPos = this.$refs.selectButton.getBoundingClientRect().top + 
+                this.$refs.selectButton.offsetHeight + 
+                this.$refs.selectableItemsList.offsetHeight;
+            
+            this.selectDropdownPosition = window.innerHeight < selectDropdownBottomPos ? 'top' : 'bottom';
+        }
+    }"
+    @keydown.escape="selectOpen = false"
+    @keydown.down.prevent="if(selectOpen) { selectableItemActiveNext() } else { selectOpen = true }"
+    @keydown.up.prevent="if(selectOpen) { selectableItemActivePrevious() } else { selectOpen = true }"
+    @keydown.enter.prevent="selectedValue = selectableItemActive.value; selectOpen = false"
+    class="relative w-full"
+>
+    <button 
+        x-ref="selectButton"
+        @click="selectOpen = !selectOpen"
+        :class="{ 'ring-2 ring-offset-2 ring-neutral-800': selectOpen }"
+        class="relative w-full min-h-[38px] py-2 pl-3 pr-10 text-left bg-background-secondary border border-neutral rounded-md shadow-sm cursor-pointer text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-800"
+        type="button"
+    >
+        <span x-text="selectableItems.find(item => item.value === selectedValue)?.label ?? 'Select language'" class="block truncate"></span>
+        <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+            <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.2072 9.0428 12.0001 2.83569 5.793 9.0428 7.20721 10.457 12.0001 5.66412 16.793 10.457 18.2072 9.0428ZM5.79285 14.9572 12 21.1643 18.2071 14.9572 16.7928 13.543 12 18.3359 7.20706 13.543 5.79285 14.9572Z"/></svg>        </span>
+    </button>
+
+    <ul
+        x-show="selectOpen"
+        x-ref="selectableItemsList"
+        @click.away="selectOpen = false"
+        x-transition:enter="transition ease-out duration-100"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        :class="{ 'bottom-full mb-1': selectDropdownPosition === 'top', 'top-full mt-1': selectDropdownPosition === 'bottom' }"
+        class="absolute z-50 w-full py-1 overflow-auto bg-background-secondary border border-neutral rounded-lg shadow-lg max-h-60 focus:outline-none text-sm"
+        x-cloak
+    >
+        <template x-for="item in selectableItems" :key="item.value">
+            <li
+                :id="item.value + '-' + selectId"
+                @click="selectedValue = item.value; selectOpen = false"
+                @mousemove="selectableItemActive = item"
+                :class="{ 'bg-neutral-700': selectableItemIsActive(item) }"
+                class="relative py-2 pl-8 pr-4 cursor-pointer select-none hover:bg-neutral-700"
+            >
+                <span 
+                    class="block truncate"
+                    :class="{ 'font-semibold': item.value === selectedValue }"
+                    x-text="item.label"
+                ></span>
+                <span
+                    x-show="item.value === selectedValue"
+                    class="absolute inset-y-0 left-0 flex items-center pl-2 text-neutral-400"
+                >
+                    <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z"/></svg>                </span>
+            </li>
+        </template>
+                </ul>
+            </div>
+            <div wire:snapshot="{&quot;data&quot;:{&quot;currentCurrency&quot;:&quot;EUR&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;exwx6R2Uxg2ehOIKBVwi&quot;,&quot;name&quot;:&quot;components.currency-switch&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;23b2d06875b635fba734166e8e6c9fc1a8049f74acfd109599251809fb0793a5&quot;}"
+                wire:effects="[]" wire:id="exwx6R2Uxg2ehOIKBVwi"></div>
+        </div>
+        </div>
+
+        <!-- Dark Mode Toggle Button -->
+        <!-- I sadly removed the easter egg (made it 500 clicks :) -->
+        <button @click="handleDarkModeToggle()" type="button" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-neutral transition" x-data="{
+        clickHistory: [],
+        handleDarkModeToggle() {
+            this.darkMode = !this.darkMode;
+            // Track clicks
+            this.clickHistory.push(Date.now());
+            // Keep only clicks from last 2 seconds
+            this.clickHistory = this.clickHistory.filter(t => Date.now() - t < 2000);
+            // If 5 clicks in 2 seconds, show Easter egg
+            if (this.clickHistory.length >= 5000000) {
+                window.showDarkModeEasterEgg();
+                this.clickHistory = [];
+            }
+        }
+    }">
+    <template x-if="!darkMode">
+        <svg class="size-5 text-base" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>    </template>
+    <template x-if="darkMode">
+        <svg class="size-5 text-base" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.3807 2.01886C9.91573 3.38768 9 5.3369 9 7.49999C9 11.6421 12.3579 15 16.5 15C18.6631 15 20.6123 14.0843 21.9811 12.6193C21.6613 17.8537 17.3149 22 12 22C6.47715 22 2 17.5228 2 12C2 6.68514 6.14629 2.33869 11.3807 2.01886Z"/></svg>    </template>
+</button>
+
+        <!-- Easter Egg Script -->
+        <script>
+            // Make function globally available
+            window.showDarkModeEasterEgg = function() {
+                // Check if popup already exists
+                if (document.getElementById('darkmode-easter-egg-overlay')) return;
+
+                // Create overlay
+                const overlay = document.createElement('div');
+                overlay.id = 'darkmode-easter-egg-overlay';
+                overlay.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+
+                // Create popup
+                const popup = document.createElement('div');
+                popup.className = 'bg-background dark:bg-background-dark rounded-lg shadow-xl p-6 max-w-md w-full mx-4 border border-gray-200 dark:border-gray-700';
+
+                const messages = [
+                    "Whoa there! Enjoying the light show?",
+                    "Toggle much? Here's a cookie 🍪",
+                    "Day... night... day... night... make up your mind!",
+                    "You've unlocked: Professional Theme Tosser",
+                    "Congratulations! You've discovered the secret theme-stress-test mode!"
+                ];
+                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                const isDarkMode = document.documentElement.classList.contains('dark');
+
+                popup.innerHTML = `
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-primary dark:text-primary-dark">Theme Toggler Extraordinaire!</h3>
+                <button id="close-easter-egg-x" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="text-foreground dark:text-foreground-dark">
+                <p>${randomMessage}</p>
+                <div class="mt-4 flex justify-center">
+                    <span class="text-4xl">${isDarkMode ? '🌙' : '☀️'}</span>
+                </div>
+                <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                    You clicked the theme toggle 5 times in 2 seconds!
+                </div>
+            </div>
+            <div class="mt-6 flex justify-end">
+                <button id="close-easter-egg-btn" class="px-4 py-2 bg-primary dark:bg-primary-dark text-white rounded hover:bg-opacity-90 transition">
+                    Close
+                </button>
+            </div>
+        `;
+
+                overlay.appendChild(popup);
+                document.body.appendChild(overlay);
+
+                // Add event listeners for close buttons
+                document.getElementById('close-easter-egg-x').addEventListener('click', function() {
+                    document.getElementById('darkmode-easter-egg-overlay').remove();
+                });
+
+                document.getElementById('close-easter-egg-btn').addEventListener('click', function() {
+                    document.getElementById('darkmode-easter-egg-overlay').remove();
+                });
+            }
+        </script>
+
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </template>
+        </div>
+    </nav>
+
+
+    <div class="flex flex-col min-h-[calc(100vh-4rem)]">
+        <!-- Adjust 4rem to match your header height -->
+
+        <main class=" flex-grow">
+            <div class="container mt-24 mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+                <div wire:snapshot="{&quot;data&quot;:[],&quot;memo&quot;:{&quot;id&quot;:&quot;xnNuDVpRyE5tD21D6YXH&quot;,&quot;name&quot;:&quot;home&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;f717b6dd1fc263b94d811aa828480d41f65561e781e0916cb1e511fc38995459&quot;}"
+                    wire:effects="[]" wire:id="xnNuDVpRyE5tD21D6YXH" class="relative min-h-[calc(100vh-200px)] w-full max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-12">
+
+                    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+                        <div class="fmh-plasma-ball top-1/4 -left-20 opacity-80 mix-blend-overlay dark:opacity-60 dark:mix-blend-soft-light"></div>
+                        <div class="fmh-plasma-ball bottom-1/4 -right-20 animation-delay-3000 opacity-80 mix-blend-overlay dark:opacity-60 dark:mix-blend-soft-light"></div>
+                        <div class="fmh-particle bg-indigo-500/20 dark:bg-indigo-400/15" style="top: 25%; left: 25%; width: 10px; height: 10px;"></div>
+                        <div class="fmh-particle bg-purple-500/20 dark:bg-purple-400/15" style="top: 65%; left: 75%; width: 12px; height: 12px;"></div>
+                    </div>
+
+                    <div class="relative z-10 flex flex-col gap-12 py-12">
+
+                        <!--[if BLOCK]><![endif]-->
+                        <!-- Hero Section with border -->
+                        <div class="hero-section rounded-3xl shadow-2xl overflow-hidden hover:shadow-xl transition-all duration-300" style="
+            background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+            border: 1px solid var(--neutral);
+        ">
+                            <div class="hero-content p-6 md:p-8" style="
+            background-color: var(--background);
+            color: var(--base);
+        ">
+                                <article class="prose prose-lg max-w-full" style="color: var(--base);">
+                                    <p>Welcome to Tropix Bots Billing Portal!</p>
+
+                                </article>
+                            </div>
+                        </div>
+                        <!--[if ENDBLOCK]><![endif]-->
+
+
+
+                        <style>
+                            .dark .hero-section {
+                                border-color: var(--dark-muted) !important;
+                            }
+
+                            .dark .hero-content {
+                                background-color: var(--dark-background) !important;
+                                color: var(--dark-base) !important;
+                            }
+
+                            .dark .hero-content .prose {
+                                color: var(--dark-base) !important;
+                            }
+                        </style>
+
+                        <!-- Features Section -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Feature 1 -->
+                            <div class="bg-[var(--background-secondary)]/80 dark:bg-[var(--dark-background-secondary)]/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-[var(--neutral)]/50 dark:border-[var(--dark-neutral)]/50 hover:shadow-xl transition-all duration-300">
+                                <div class="w-12 h-12 rounded-lg bg-[var(--iconbg1)] dark:bg-[var(--dark-iconbg1)] flex items-center justify-center mb-4 shadow-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[var(--icon1)] dark:text-[var(--dark-icon1)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-[var(--base)] dark:text-[var(--dark-base)] mb-2">
+                                    Many Programming languages
+                                </h3>
+                                <div class="text-[var(--muted)] dark:text-[var(--dark-muted)] text-sm">
+                                    <div>
+                                        <p class="text-green-500">For both NodeJs and Python at the same time</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div class="bg-[var(--background-secondary)]/80 dark:bg-[var(--dark-background-secondary)]/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-[var(--neutral)]/50 dark:border-[var(--dark-neutral)]/50 hover:shadow-xl transition-all duration-300">
+                                <div class="w-12 h-12 rounded-lg bg-[var(--iconbg2)] dark:bg-[var(--dark-iconbg2)] flex items-center justify-center mb-4 shadow-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[var(--icon2)] dark:text-[var(--dark-icon2)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-[var(--base)] dark:text-[var(--dark-base)] mb-2">
+                                    Unlimited Bots
+                                </h3>
+                                <div class="text-[var(--muted)] dark:text-[var(--dark-muted)] text-sm">
+                                    <div>
+                                        <p class="text-green-500">Unlimited Bots for your discord server</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div class="bg-[var(--background-secondary)]/80 dark:bg-[var(--dark-background-secondary)]/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-[var(--neutral)]/50 dark:border-[var(--dark-neutral)]/50 hover:shadow-xl transition-all duration-300">
+                                <div class="w-12 h-12 rounded-lg bg-[var(--iconbg3)] dark:bg-[var(--dark-iconbg3)] flex items-center justify-center mb-4 shadow-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[var(--icon3)] dark:text-[var(--dark-icon3)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-[var(--base)] dark:text-[var(--dark-base)] mb-2">
+                                    Secure &amp; Reliable
+                                </h3>
+                                <div class="text-[var(--muted)] dark:text-[var(--dark-muted)] text-sm">
+                                    <div>
+                                        <p class="text-green-500">Enterprise-grade security and 99.9% uptime guarantee* for all your hosting needs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Categories Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <!--[if BLOCK]><![endif]-->
+                            <a href="https://billing.tropixbots.xyz/products/discord-bot-hosting" wire:navigate class="group relative bg-[var(--background-secondary)]/80 dark:bg-[var(--dark-background-secondary)]/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-[var(--neutral)]/50 dark:border-[var(--dark-neutral)]/50 hover:border-[var(--primary)]/30 dark:hover:border-[var(--dark-primary)]/50">
+
+                                <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/0 to-[var(--secondary)]/0 group-hover:from-[var(--primary)]/5 group-hover:to-[var(--secondary)]/10 transition-all duration-500 z-0"></div>
+
+                                <div class="relative z-10 flex flex-col h-full">
+                                    <!--[if BLOCK]><![endif]-->
+                                    <!--[if BLOCK]><![endif]-->
+                                    <div class="mt-6"></div>
+                                    <div></div>
+                                    <!--[if ENDBLOCK]><![endif]-->
+                                    <!--[if ENDBLOCK]><![endif]-->
+
+                                    <div class="p-6 pt-0 flex-grow">
+                                        <!--[if BLOCK]><![endif]-->
+                                        <h2 class="text-xl font-bold text-[var(--base)] dark:text-[var(--dark-base)] mb-3">Discord Bot Hosting</h2>
+                                        <!--[if ENDBLOCK]><![endif]-->
+
+                                        <!--[if BLOCK]><![endif]-->
+                                        <article class="prose-sm dark:prose-invert text-[var(--muted)] dark:text-[var(--dark-muted)] mb-5">
+                                            <p>Plans for Discord Bot Hosting for the TropixSoft</p>
+                                        </article>
+                                        <!--[if ENDBLOCK]><![endif]-->
+                                    </div>
+
+                                    <div class="px-6 pb-6">
+                                        <div class="w-full gradient-button text-[var(--inverted)] font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                            View
+                                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://billing.tropixbots.xyz/products/premade-discord-bots" wire:navigate class="group relative bg-[var(--background-secondary)]/80 dark:bg-[var(--dark-background-secondary)]/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-[var(--neutral)]/50 dark:border-[var(--dark-neutral)]/50 hover:border-[var(--primary)]/30 dark:hover:border-[var(--dark-primary)]/50">
+
+                                <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/0 to-[var(--secondary)]/0 group-hover:from-[var(--primary)]/5 group-hover:to-[var(--secondary)]/10 transition-all duration-500 z-0"></div>
+
+                                <div class="relative z-10 flex flex-col h-full">
+                                    <!--[if BLOCK]><![endif]-->
+                                    <!--[if BLOCK]><![endif]-->
+                                    <div class="mt-6"></div>
+                                    <div></div>
+                                    <!--[if ENDBLOCK]><![endif]-->
+                                    <!--[if ENDBLOCK]><![endif]-->
+
+                                    <div class="p-6 pt-0 flex-grow">
+                                        <!--[if BLOCK]><![endif]-->
+                                        <h2 class="text-xl font-bold text-[var(--base)] dark:text-[var(--dark-base)] mb-3">Premade Discord Bots</h2>
+                                        <!--[if ENDBLOCK]><![endif]-->
+
+                                        <!--[if BLOCK]><![endif]-->
+                                        <article class="prose-sm dark:prose-invert text-[var(--muted)] dark:text-[var(--dark-muted)] mb-5">
+                                            <p>Plans for premade discord bots</p>
+                                        </article>
+                                        <!--[if ENDBLOCK]><![endif]-->
+                                    </div>
+
+                                    <div class="px-6 pb-6">
+                                        <div class="w-full gradient-button text-[var(--inverted)] font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                            View
+                                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://billing.tropixbots.xyz/products/custom-discord-bots" wire:navigate class="group relative bg-[var(--background-secondary)]/80 dark:bg-[var(--dark-background-secondary)]/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-[var(--neutral)]/50 dark:border-[var(--dark-neutral)]/50 hover:border-[var(--primary)]/30 dark:hover:border-[var(--dark-primary)]/50">
+
+                                <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/0 to-[var(--secondary)]/0 group-hover:from-[var(--primary)]/5 group-hover:to-[var(--secondary)]/10 transition-all duration-500 z-0"></div>
+
+                                <div class="relative z-10 flex flex-col h-full">
+                                    <!--[if BLOCK]><![endif]-->
+                                    <!--[if BLOCK]><![endif]-->
+                                    <div class="mt-6"></div>
+                                    <div></div>
+                                    <!--[if ENDBLOCK]><![endif]-->
+                                    <!--[if ENDBLOCK]><![endif]-->
+
+                                    <div class="p-6 pt-0 flex-grow">
+                                        <!--[if BLOCK]><![endif]-->
+                                        <h2 class="text-xl font-bold text-[var(--base)] dark:text-[var(--dark-base)] mb-3">Custom Discord Bots</h2>
+                                        <!--[if ENDBLOCK]><![endif]-->
+
+                                        <!--[if BLOCK]><![endif]-->
+                                        <article class="prose-sm dark:prose-invert text-[var(--muted)] dark:text-[var(--dark-muted)] mb-5">
+                                            <p>Prices for Custom Built Discord Bots</p>
+                                        </article>
+                                        <!--[if ENDBLOCK]><![endif]-->
+                                    </div>
+
+                                    <div class="px-6 pb-6">
+                                        <div class="w-full gradient-button text-[var(--inverted)] font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                            View
+                                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://billing.tropixbots.xyz/products/web-hosting" wire:navigate class="group relative bg-[var(--background-secondary)]/80 dark:bg-[var(--dark-background-secondary)]/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-[var(--neutral)]/50 dark:border-[var(--dark-neutral)]/50 hover:border-[var(--primary)]/30 dark:hover:border-[var(--dark-primary)]/50">
+
+                                <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/0 to-[var(--secondary)]/0 group-hover:from-[var(--primary)]/5 group-hover:to-[var(--secondary)]/10 transition-all duration-500 z-0"></div>
+
+                                <div class="relative z-10 flex flex-col h-full">
+                                    <!--[if BLOCK]><![endif]-->
+                                    <!--[if BLOCK]><![endif]-->
+                                    <div class="mt-6"></div>
+                                    <div></div>
+                                    <!--[if ENDBLOCK]><![endif]-->
+                                    <!--[if ENDBLOCK]><![endif]-->
+
+                                    <div class="p-6 pt-0 flex-grow">
+                                        <!--[if BLOCK]><![endif]-->
+                                        <h2 class="text-xl font-bold text-[var(--base)] dark:text-[var(--dark-base)] mb-3">Web Hosting</h2>
+                                        <!--[if ENDBLOCK]><![endif]-->
+
+                                        <!--[if BLOCK]><![endif]-->
+                                        <article class="prose-sm dark:prose-invert text-[var(--muted)] dark:text-[var(--dark-muted)] mb-5">
+                                            <p>Web hosting plans</p>
+                                        </article>
+                                        <!--[if ENDBLOCK]><![endif]-->
+                                    </div>
+
+                                    <div class="px-6 pb-6">
+                                        <div class="w-full gradient-button text-[var(--inverted)] font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                            View
+                                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                        </div>
+
+
+
+
+                        <div class="relative">
+
+                        </div>
+                    </div>
+
+                    <style>
+                        :root {
+                            --primary: hsl(116, 100%, 33%);
+                            --secondary: hsl(118, 98%, 26%);
+                            --neutral: hsl(220, 25%, 85%);
+                            --base: hsl(116, 100%, 33%);
+                            --muted: hsl(220, 2%, 76%);
+                            --inverted: hsl(100, 100%, 100%);
+                            --background: hsl(100, 100%, 100%);
+                            --background-secondary: hsl(0, 0%, 97%);
+                            --dark-primary: hsl(116, 100%, 33%);
+                            --dark-secondary: hsl(118, 98%, 26%);
+                            --dark-neutral: hsl(260, 4%, 14%);
+                            --dark-base: hsl(100, 100%, 100%);
+                            --dark-muted: hsl(220, 0%, 100%);
+                            --dark-inverted: hsl(220, 3%, 76%);
+                            --dark-background: hsl(240, 10%, 4%);
+                            --dark-background-secondary: hsl(270, 4%, 10%);
+                            --dark-iconbg1: hsl(217, 91%, 60%);
+                            --dark-iconbg2: hsl(142, 76%, 36%);
+                            --dark-iconbg3: hsl(346, 87%, 43%);
+                            --dark-icon1: hsl(0, 0%, 100%);
+                            --dark-icon2: hsl(0, 0%, 100%);
+                            --dark-icon3: hsl(0, 0%, 100%);
+                            --iconbg1: hsl(217, 91%, 60%);
+                            --iconbg2: hsl(142, 76%, 36%);
+                            --iconbg3: hsl(346, 87%, 43%);
+                            --icon1: hsl(0, 0%, 100%);
+                            --icon2: hsl(0, 0%, 100%);
+                            --icon3: hsl(0, 0%, 100%);
+                        }
+
+                        .fmh-particle {
+                            position: absolute;
+                            border-radius: 50%;
+                            animation: float 25s infinite ease-in-out;
+                            z-index: 0;
+                            will-change: transform;
+                            filter: blur(3px);
+                        }
+
+                        .fmh-plasma-ball {
+                            position: absolute;
+                            width: 300px;
+                            height: 300px;
+                            border-radius: 50%;
+                            background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+                            filter: blur(30px);
+                            z-index: 0;
+                        }
+
+                        @keyframes float {
+                            0%,
+                            100% {
+                                transform: translate(0, 0) rotate(0deg);
+                            }
+                            20% {
+                                transform: translate(15px, 15px) rotate(5deg);
+                            }
+                            40% {
+                                transform: translate(20px, -10px) rotate(-5deg);
+                            }
+                            60% {
+                                transform: translate(-15px, 20px) rotate(8deg);
+                            }
+                            80% {
+                                transform: translate(-10px, -5px) rotate(-3deg);
+                            }
+                        }
+
+                        .animation-delay-3000 {
+                            animation-delay: 3s;
+                        }
+
+                        /* Gradient Button */
+
+                        .gradient-button {
+                            background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+                            transition: background 0.3s ease;
+                        }
+
+                        .gradient-button:hover {
+                            background: linear-gradient(to bottom right, var(--dark-primary), var(--dark-secondary));
+                        }
+                    </style>
+
+                </div>
+            </div>
+            <div x-data>
+                <template x-for="(notification, index) in $store.notifications.notifications" :key="notification.id">
+        <div x-show="notification.show" x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90" @click="$store.notifications.removeNotification(notification.id)"
+            :class="notification.type === 'success' ? 'bg-secondary' : 'bg-red-500'"
+            class="fixed text-white px-4 py-2 rounded shadow-md mb-4 z-50"
+            :style="'top: ' + (20 + index * 60) + 'px;left: 50%; transform: translateX(-50%);'">
+            <p x-text="notification.message"></p>
+        </div>
+    </template>
+            </div>
+        </main>
+
+        <!-- Remove the py-8 wrapper from around the footer -->
+        <!-- Default Footer -->
+        <footer class="mt-12 w-full bg-[var(--background-secondary)] dark:bg-[var(--dark-background-secondary)] relative overflow-hidden border-t border-gray-200 dark:border-gray-700 pt-8">
+
+            <!-- Floating particles background -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+                <div class="fmh-particle bg-[var(--primary)]/20 dark:bg-[var(--dark-primary)]/15" style="top: 20%; left: 15%; width: 8px; height: 8px;"></div>
+                <div class="fmh-particle bg-[var(--secondary)]/20 dark:bg-[var(--dark-secondary)]/15" style="top: 70%; left: 80%; width: 12px; height: 12px;"></div>
+                <div class="fmh-particle bg-[var(--primary)]/15 dark:bg-[var(--dark-primary)]/10" style="top: 40%; left: 65%; width: 6px; height: 6px;"></div>
+                <div class="fmh-plasma-ball -bottom-20 -left-20 opacity-40 dark:opacity-15"></div>
+            </div>
+
+            <!-- Reduced vertical padding from py-12 to py-8 -->
+            <div class="container mx-auto px-4 py-8 max-w-7xl relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Brand/Logo section -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex flex-col items-start">
+                            <img src="/storage/logo.webp" alt="Tropix Bots" class="h-12 w-auto inline-block" />
+                            <p class="mt-2 text-sm text-[var(--muted)] dark:text-[var(--dark-muted)] leading-relaxed">
+                                Modern solutions for modern Discord Servers
+                            </p>
+                        </div>
+
+                        <!-- Social icon -->
+                        <div class="flex items-center gap-3">
+                            <a href="https://discord.gg/tropixbots" target="_blank" class="p-2 rounded-lg bg-white/80 dark:bg-[var(--dark-background)] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)]"
+                                aria-label="Discord">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 127 96" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M107.7 8.1A105.2 105.2 0 0 0 81.5 0a72.1 72.1 0 0 0-3.4 6.8 97.6 97.6 0 0 0-29.1 0A72.1 72.1 0 0 0 45.5 0a105.2 105.2 0 0 0-26.2 8.1C2.8 32.4-2.7 56.4 1.5 80a105.4 105.4 0 0 0 32.2 16.9 77.7 77.7 0 0 0 6.7-10.8 68.3 68.3 0 0 1-10.6-5.1c.9-.6 1.7-1.3 2.5-2a75.2 75.2 0 0 0 64.3 0c.8.7 1.6 1.4 2.5 2a68.3 68.3 0 0 1-10.6 5.1 77.7 77.7 0 0 0 6.7 10.8 105.4 105.4 0 0 0 32.2-16.9c4.4-23.6-1.3-47.6-18.8-71.9ZM42.4 58.3c-6.1 0-11.2-5.6-11.2-12.5s5-12.5 11.2-12.5c6.2 0 11.2 5.6 11.2 12.5.1 6.9-5 12.5-11.2 12.5Zm42.5 0c-6.1 0-11.2-5.6-11.2-12.5s5-12.5 11.2-12.5c6.2 0 11.2 5.6 11.2 12.5.1 6.9-5 12.5-11.2 12.5Z"/>
+                            </svg>
+                        </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-[var(--base)] dark:text-[var(--dark-base)] uppercase tracking-wider mb-4 relative pl-3">
+                            <span class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-gradient-to-b from-[var(--primary)] to-[var(--secondary)] rounded-full"></span>
+                            <span class="relative inline-block px-2 py-1 bg-white/50 dark:bg-[var(--dark-background)]/50 rounded-lg backdrop-blur-sm">
+                            Quick Links
+                        </span>
+                        </h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="https://tropixbots.xyz" class="text-sm text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mr-2 group-hover:bg-[var(--primary)] transition-colors"></span>
+                                Home
+                            </a>
+                            </li>
+                            <li>
+                                <a href="https://tropixbots.xyz/#features" class="text-sm text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mr-2 group-hover:bg-[var(--primary)] transition-colors"></span>
+                                Features
+                            </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mr-2 group-hover:bg-[var(--primary)] transition-colors"></span>
+                                Pricing
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-[var(--base)] dark:text-[var(--dark-base)] uppercase tracking-wider mb-4 relative pl-3">
+                            <span class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-gradient-to-b from-[var(--secondary)] to-pink-500 rounded-full"></span>
+                            <span class="relative inline-block px-2 py-1 bg-white/50 dark:bg-[var(--dark-background)]/50 rounded-lg backdrop-blur-sm">
+                            Support
+                        </span>
+                        </h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="https://discord.gg/tropixbots" class="text-sm text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[var(--secondary)]/70 dark:bg-[var(--dark-secondary)]/70 mr-2"></span>
+                                Contact
+                            </a>
+                            </li>
+                            <li>
+                                <a href="https://billing.tropixbots.xyz/tickets" class="text-sm text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[var(--secondary)]/30 dark:bg-[var(--dark-secondary)]/30 mr-2"></span>
+                                Tickets
+                            </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[var(--secondary)]/50 dark:bg-[var(--dark-secondary)]/50 mr-2"></span>
+                                Status
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Company -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-[var(--base)] dark:text-[var(--dark-base)] uppercase tracking-wider mb-4 relative pl-3">
+                            <span class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-gradient-to-b from-[var(--primary)] to-blue-500 rounded-full"></span>
+                            <span class="relative inline-block px-2 py-1 bg-white/50 dark:bg-[var(--dark-background)]/50 rounded-lg backdrop-blur-sm">
+                            Company
+                        </span>
+                        </h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="https://tropixbots.xyz/about" class="text-sm text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mr-2 group-hover:bg-[var(--primary)] transition-colors"></span>
+                                About Us
+                            </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mr-2 group-hover:bg-[var(--primary)] transition-colors"></span>
+                                Privacy Policy
+                            </a>
+                            </li>
+                            <li>
+                                <a href="https://tropixbots.xyz/terms" class="text-sm text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)] transition-colors flex items-center group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mr-2 group-hover:bg-[var(--primary)] transition-colors"></span>
+                                Terms of Service
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom section -->
+                <div class="mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-gray-200 dark:border-gray-700 relative">
+                    <!-- Animated top border -->
+                    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+
+                    <div class="text-sm text-[var(--muted)] dark:text-[var(--dark-muted)]">
+                        Tropix Bots © 2025. All rights reserved.
+                    </div>
+
+                    <a href="https://paymenter.org" target="_blank" class="group flex items-center gap-1 text-[var(--muted)] hover:text-[var(--primary)] dark:text-[var(--dark-muted)] dark:hover:text-[var(--dark-primary)] transition-colors">
+                    <svg class="size-3 text-current group-hover:text-[#4667FF] transition-colors duration-200" viewBox="0 0 150 205" fill="currentColor">
+                        <g clip-path="url(#clip0_1_17)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 107V205H42.8571V139.638H100C133.333 139.638 150 123 150 89.7246V69.5L75 107V69.5L148.227 32.8863C143.133 10.9621 127.057 0 100 0H0V107ZM0 107V69.5L75 32V69.5L0 107Z"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_17">
+                                <rect width="150" height="205"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <p class="text-xs">Powered by Paymenter</p>
+                </a>
+                </div>
+            </div>
+        </footer>
+
+
+        <style>
+            :root {
+                /* Light mode colors */
+                --primary: hsl(116, 100%, 33%);
+                --secondary: hsl(118, 98%, 26%);
+                --neutral: hsl(220, 25%, 85%);
+                --base: hsl(116, 100%, 33%);
+                --muted: hsl(220, 2%, 76%);
+                --inverted: hsl(100, 100%, 100%);
+                --background: hsl(100, 100%, 100%);
+                --background-secondary: hsl(0, 0%, 97%);
+                /* Dark mode colors - improved contrast */
+                --dark-primary: hsl(116, 100%, 33%);
+                --dark-secondary: hsl(118, 98%, 26%);
+                --dark-neutral: hsl(260, 4%, 14%);
+                --dark-base: hsl(100, 100%, 100%);
+                --dark-muted: hsl(220, 0%, 100%);
+                --dark-inverted: hsl(220, 3%, 76%);
+                --dark-background: hsl(240, 10%, 4%);
+                --dark-background-secondary: hsl(270, 4%, 10%);
+                /* Additional contrast variables */
+                --text-primary: var(--base);
+                --text-secondary: var(--muted);
+                --dark-text-primary: var(--dark-base);
+                --dark-text-secondary: var(--dark-muted);
+            }
+
+            /* Improved dark mode link contrast */
+
+            .dark a {
+                color: var(--dark-text-secondary);
+            }
+
+            .dark a:hover {
+                color: var(--dark-primary);
+            }
+
+            .fmh-particle {
+                position: absolute;
+                border-radius: 50%;
+                animation: float 15s infinite ease-in-out;
+                z-index: 0;
+                filter: blur(1px);
+                opacity: 0.8;
+            }
+
+            .fmh-plasma-ball {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+                filter: blur(30px);
+                z-index: 0;
+                animation: pulse 8s infinite ease-in-out;
+            }
+
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translate(0, 0) rotate(0deg);
+                }
+                50% {
+                    transform: translate(15px, 15px) rotate(5deg);
+                }
+            }
+
+            @keyframes pulse {
+                0%,
+                100% {
+                    opacity: 0.2;
+                    transform: scale(1);
+                }
+                50% {
+                    opacity: 0.4;
+                    transform: scale(1.1);
+                }
+            }
+        </style>
+    </div>
+    </div>
+    </div>
+
+
+
+    <script>
+        // Keyboard shortcuts for navigation
+        document.addEventListener('keydown', function(e) {
+            // Check if Alt key is pressed along with another key
+            if (e.altKey) {
+                const baseUrl = 'https://billing.tropixbots.xyz'; // Gets the application's base URL
+
+                switch (e.key.toLowerCase()) {
+                    case 'd':
+                        // Alt + D for Dashboard
+                        window.location.href = baseUrl + '/dashboard';
+                        break;
+                    case 't':
+                        // Alt + T for Tickets
+                        window.location.href = baseUrl + '/tickets';
+                        break;
+                    case 'a':
+                        // Alt + A for Account
+                        window.location.href = baseUrl + '/account';
+                        break;
+                    case 'h':
+                        // Alt + H for Home
+                        window.location.href = baseUrl + '/';
+                        break;
+                    case 's':
+                        // Alt + S for Services
+                        window.location.href = baseUrl + '/services';
+                        break;
+                    case 'i':
+                        // Alt + I for Invoices
+                        window.location.href = baseUrl + '/invoices';
+                        break;
+                }
+            }
+        });
+    </script>
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if smooth scroll is enabled in the theme settings
+            const enableSmoothScroll = true;
+
+            if (enableSmoothScroll) {
+                // Enable smooth scrolling
+                document.documentElement.style.scrollBehavior = 'smooth';
+            } else {
+                // Disable smooth scrolling
+                document.documentElement.style.scrollBehavior = 'auto';
+            }
+        });
+    </script>
+
+
+    <style>
+        :root {
+            --primary: hsl(116, 100%, 33%);
+            --secondary: hsl(118, 98%, 26%);
+            --neutral: hsl(220, 25%, 85%);
+            --base: hsl(116, 100%, 33%);
+            --muted: hsl(220, 2%, 76%);
+            --inverted: hsl(100, 100%, 100%);
+            --background: hsl(100, 100%, 100%);
+            --background-secondary: hsl(0, 0%, 97%);
+            --dark-primary: hsl(116, 100%, 33%);
+            --dark-secondary: hsl(118, 98%, 26%);
+            --dark-neutral: hsl(260, 4%, 14%);
+            --dark-base: hsl(100, 100%, 100%);
+            --dark-muted: hsl(220, 0%, 100%);
+            --dark-inverted: hsl(220, 3%, 76%);
+            --dark-background: hsl(240, 10%, 4%);
+            --dark-background-secondary: hsl(270, 4%, 10%);
+        }
+
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--primary);
+            color: var(--inverted);
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: var(--secondary);
+        }
+
+        .dark #scrollToTopBtn {
+            background-color: var(--dark-primary);
+            color: var(--dark-inverted);
+        }
+
+        .dark #scrollToTopBtn:hover {
+            background-color: var(--dark-secondary);
+        }
+    </style>
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-primary text-white text-xl shadow-lg hidden transition-all duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50">
+        ↑
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            // Show button when user scrolls down
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    scrollToTopBtn.style.display = 'flex';
+                    scrollToTopBtn.style.justifyContent = 'center';
+                    scrollToTopBtn.style.alignItems = 'center';
+                } else {
+                    scrollToTopBtn.style.display = 'none';
+                }
+            });
+
+            // Smooth scroll to top
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+        // Set up lazy loading configuration from theme settings
+        window.lazyConfig = {
+            // Core Settings
+            lazy_loading_enabled: true,
+            lazy_root_margin: '500px 0px',
+            lazy_threshold: 0.001,
+            lazy_delay: 50,
+            lazy_recheck_delay: 500,
+            lazy_timeout: 100,
+
+            // CSS Classes
+            lazy_class: 'lazy-auto',
+            lazy_loaded_class: 'lazy-loaded',
+            lazy_loading_class: 'lazy-loading',
+            lazy_error_class: 'lazy-error',
+
+            // Element Selectors
+            lazy_images_enabled: true,
+            lazy_backgrounds_enabled: true,
+            lazy_iframes_enabled: true,
+            lazy_custom_selector: '',
+
+            // Performance Settings
+            lazy_throttle_limit: 100,
+            lazy_viewport_multiplier: 2,
+            lazy_use_idle_callback: true,
+
+            // Dynamic Content Support
+            lazy_observe_dom: true,
+            lazy_mutation_delay: 100,
+
+            // Advanced Options
+            lazy_fallback_enabled: true,
+            lazy_events_enabled: true,
+            lazy_console_errors: true,
+            lazy_ignore_attribute: 'data-lazy-ignore',
+
+            // Critical Content Exclusions
+            lazy_critical_selectors: 'header, .hero, .above-fold, .critical',
+            lazy_skip_small_images: false,
+            lazy_small_image_threshold: 50
+        };
+    </script>
+
+    <script>
+        // =============================================
+        // LAZY LOADER IMPLEMENTATION
+        // =============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            // Default configuration (fallbacks in case window.lazyConfig is missing)
+            var defaultConfig = {
+                lazy_loading_enabled: true,
+                lazy_root_margin: '500px 0px',
+                lazy_threshold: 0.001,
+                lazy_delay: 50,
+                lazy_recheck_delay: 500,
+                lazy_timeout: 100,
+                lazy_class: 'lazy-auto',
+                lazy_loaded_class: 'lazy-loaded',
+                lazy_loading_class: 'lazy-loading',
+                lazy_error_class: 'lazy-error',
+                lazy_images_enabled: true,
+                lazy_backgrounds_enabled: true,
+                lazy_iframes_enabled: true,
+                lazy_custom_selector: '',
+                lazy_throttle_limit: 100,
+                lazy_viewport_multiplier: 2,
+                lazy_use_idle_callback: true,
+                lazy_observe_dom: true,
+                lazy_mutation_delay: 100,
+                lazy_fallback_enabled: true,
+                lazy_events_enabled: true,
+                lazy_console_errors: true,
+                lazy_ignore_attribute: 'data-lazy-ignore',
+                lazy_critical_selectors: 'header, .hero, .above-fold, .critical',
+                lazy_skip_small_images: false,
+                lazy_small_image_threshold: 50
+            };
+
+            // Merge configurations (theme settings override defaults)
+            var config = Object.assign({}, defaultConfig, window.lazyConfig || {});
+
+            // Build selector string based on configuration
+            function buildSelectors() {
+                var selectors = [];
+                if (config.lazy_images_enabled) selectors.push('img[src]:not([src=""]):not([loading="lazy"])');
+                if (config.lazy_backgrounds_enabled) selectors.push('[style*="background-image"]:not([' + config.lazy_ignore_attribute + '])');
+                if (config.lazy_iframes_enabled) selectors.push('iframe[src]:not([src=""]):not([loading="lazy"])');
+                if (config.lazy_custom_selector) selectors.push(config.lazy_custom_selector);
+                return selectors.join(', ');
+            }
+
+            // Auto-convert elements to lazy load
+            function autoLazify() {
+                if (!config.lazy_loading_enabled) return false;
+
+                var selectorString = buildSelectors();
+                if (!selectorString) return false;
+
+                var candidates = Array.prototype.slice.call(document.querySelectorAll(selectorString));
+                var criticalElements = config.lazy_critical_selectors ?
+                    document.querySelectorAll(config.lazy_critical_selectors) : [];
+
+                candidates.forEach(function(el) {
+                    // Skip if in critical areas or already processed
+                    if (el.closest('[' + config.lazy_ignore_attribute + ']') ||
+                        Array.prototype.slice.call(criticalElements).some(function(critical) {
+                            return critical.contains(el);
+                        }) ||
+                        el.classList.contains(config.lazy_loaded_class) ||
+                        el.classList.contains(config.lazy_class)) {
+                        return;
+                    }
+
+                    // Skip small images if enabled
+                    if (config.lazy_skip_small_images && el.tagName === 'IMG') {
+                        var rect = el.getBoundingClientRect();
+                        if (rect.width <= config.lazy_small_image_threshold &&
+                            rect.height <= config.lazy_small_image_threshold) {
+                            return;
+                        }
+                    }
+
+                    // Handle images
+                    if (el.tagName === 'IMG') {
+                        el.dataset.src = el.src;
+                        el.removeAttribute('src');
+                        el.classList.add(config.lazy_class);
+                    }
+                    // Handle background images
+                    else if (el.style.backgroundImage) {
+                        var bgUrl = el.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/i);
+                        if (bgUrl && bgUrl[1]) {
+                            el.dataset.bgSrc = bgUrl[1];
+                            el.style.backgroundImage = 'none';
+                            el.classList.add(config.lazy_class);
+                        }
+                    }
+                    // Handle iframes
+                    else if (el.tagName === 'IFRAME') {
+                        el.dataset.src = el.src;
+                        el.removeAttribute('src');
+                        el.classList.add(config.lazy_class);
+                    }
+                    // Handle custom elements
+                    else if (config.lazy_custom_selector && el.matches(config.lazy_custom_selector)) {
+                        if (el.hasAttribute('src')) {
+                            el.dataset.src = el.src;
+                            el.removeAttribute('src');
+                        }
+                        el.classList.add(config.lazy_class);
+                    }
+                });
+
+                return candidates.length > 0;
+            }
+
+            // Throttle function for scroll events
+            function throttle(func, limit) {
+                var inThrottle;
+                return function() {
+                    var args = arguments;
+                    var context = this;
+                    if (!inThrottle) {
+                        func.apply(context, args);
+                        inThrottle = true;
+                        setTimeout(function() {
+                            inThrottle = false;
+                        }, limit);
+                    }
+                };
+            }
+
+            // Check if element is in viewport (fallback)
+            function isInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= window.innerHeight * config.lazy_viewport_multiplier &&
+                    rect.bottom >= 0 &&
+                    rect.left <= window.innerWidth * config.lazy_viewport_multiplier &&
+                    rect.right >= 0
+                );
+            }
+
+            // Load individual item
+            function loadItem(element) {
+                if (!element.classList.contains(config.lazy_class)) return;
+
+                element.classList.add(config.lazy_loading_class);
+
+                function performLoad() {
+                    try {
+                        if (element.dataset.src) {
+                            if (element.tagName === 'IMG') {
+                                element.src = element.dataset.src;
+                            } else if (element.tagName === 'IFRAME') {
+                                element.src = element.dataset.src;
+                            } else {
+                                element.src = element.dataset.src;
+                            }
+                        }
+
+                        if (element.dataset.bgSrc) {
+                            element.style.backgroundImage = `url(${element.dataset.bgSrc})`;
+                        }
+
+                        element.classList.remove(config.lazy_class, config.lazy_loading_class);
+                        element.classList.add(config.lazy_loaded_class);
+
+                        // Dispatch event if enabled
+                        if (config.lazy_events_enabled) {
+                            element.dispatchEvent(new CustomEvent('lazy-loaded', {
+                                bubbles: true
+                            }));
+                        }
+                    } catch (error) {
+                        element.classList.remove(config.lazy_loading_class);
+                        element.classList.add(config.lazy_error_class);
+                        if (config.lazy_console_errors) {
+                            console.error('Lazy load error:', error);
+                        }
+                    }
+                }
+
+                if (config.lazy_use_idle_callback && 'requestIdleCallback' in window) {
+                    requestIdleCallback(performLoad, {
+                        timeout: config.lazy_timeout
+                    });
+                } else {
+                    setTimeout(performLoad, config.lazy_timeout);
+                }
+            }
+
+            // Core lazy loading functionality
+            function turboLazyLoad() {
+                if (!config.lazy_loading_enabled) return;
+
+                // First auto-convert elements
+                var hasNewItems = autoLazify();
+                var lazyItems = document.getElementsByClassName(config.lazy_class);
+                var totalItems = lazyItems.length;
+
+                if (!totalItems) return;
+
+                if ('IntersectionObserver' in window) {
+                    var observer = new IntersectionObserver(function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                var lazyItem = entry.target;
+                                loadItem(lazyItem);
+                                observer.unobserve(lazyItem);
+                            }
+                        });
+                    }, {
+                        rootMargin: config.lazy_root_margin,
+                        threshold: config.lazy_threshold
+                    });
+
+                    Array.prototype.slice.call(lazyItems).forEach(function(item) {
+                        observer.observe(item);
+                    });
+                } else if (config.lazy_fallback_enabled) {
+                    // Fallback for older browsers
+                    var loadVisible = throttle(function() {
+                        Array.prototype.slice.call(lazyItems).forEach(function(item) {
+                            if (isInViewport(item)) {
+                                loadItem(item);
+                            }
+                        });
+                    }, config.lazy_throttle_limit);
+
+                    window.addEventListener('scroll', loadVisible);
+                    window.addEventListener('resize', loadVisible);
+                    loadVisible();
+                }
+
+                // If new items were added, check again after a short delay
+                if (hasNewItems) {
+                    setTimeout(turboLazyLoad, config.lazy_recheck_delay);
+                }
+            }
+
+            // DOM Mutation Observer for dynamic content
+            function setupMutationObserver() {
+                if (!config.lazy_observe_dom) return;
+
+                var observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function() {
+                        if (autoLazify()) {
+                            setTimeout(turboLazyLoad, config.lazy_mutation_delay);
+                        }
+                    });
+                });
+
+                observer.observe(document.documentElement, {
+                    childList: true,
+                    subtree: true,
+                    attributes: false,
+                    characterData: false
+                });
+            }
+
+            // Initialize
+            if (config.lazy_loading_enabled) {
+                setTimeout(turboLazyLoad, config.lazy_delay);
+                setupMutationObserver();
+            }
+
+            // Expose for manual control
+            window.turboLazyLoad = turboLazyLoad;
+        });
+    </script>
+
+    <script>
+        /*
+        Veltrix Theme CLI v2.4 BETA
+        Theme Version: 2.4 BETA
+        CLI Version: 0.9.0 BETA
+        Created by QKing and Melvin
+
+        Access in browser console:
+        theme.help()
+        */
+
+        const theme = (() => {
+            const root = document.documentElement;
+            const THEME_VERSION = "2.4";
+            const CLI_VERSION = "0.9.1 BETA";
+
+            const isHSL = (val) => /^hsl\(/i.test(val.trim());
+
+            function get(variable) {
+                const val = getComputedStyle(root).getPropertyValue(variable).trim();
+                if (!val) console.warn(`"${variable}" not found.`);
+                return val;
+            }
+
+            function set(variable, value) {
+                if (!/^--/.test(variable)) {
+                    console.error('Invalid variable name. Must start with "--"');
+                    return;
+                }
+                if (!isHSL(value)) {
+                    console.warn(`"${value}" does not appear to be an HSL color. Proceeding anyway.`);
+                }
+                root.style.setProperty(variable, value);
+                console.log(`Set ${variable} → ${value}`);
+            }
+
+            function list() {
+                const styles = getComputedStyle(root);
+                const vars = {};
+                for (let i = 0; i < styles.length; i++) {
+                    const name = styles[i];
+                    if (name.startsWith("--")) {
+                        vars[name] = styles.getPropertyValue(name).trim();
+                    }
+                }
+                console.table(vars);
+            }
+
+            function exportTheme(filename = 'veltrix-theme.css') {
+                const styles = getComputedStyle(root);
+                let css = ':root {\n';
+                for (let i = 0; i < styles.length; i++) {
+                    const name = styles[i];
+                    if (name.startsWith("--")) {
+                        const value = styles.getPropertyValue(name).trim();
+                        css += `  ${name}: ${value};\n`;
+                    }
+                }
+                css += '}';
+                const blob = new Blob([css], {
+                    type: "text/css"
+                });
+                const link = document.createElement("a");
+                link.href = URL.createObjectURL(blob);
+                link.download = filename;
+                link.click();
+                URL.revokeObjectURL(link.href);
+                console.log(`Theme exported as "${filename}"`);
+            }
+
+            function importTheme(cssText) {
+                const matches = cssText.match(/--[\w-]+:\s*[^;]+;/g);
+                if (!matches) {
+                    console.error("No valid CSS variables found.");
+                    return;
+                }
+                matches.forEach(line => {
+                    const [key, val] = line.split(":").map(s => s.trim().replace(";", ""));
+                    set(key, val);
+                });
+                console.log("Theme variables imported.");
+            }
+
+            function save(name = "veltrix") {
+                const styles = getComputedStyle(root);
+                const vars = {};
+                for (let i = 0; i < styles.length; i++) {
+                    const prop = styles[i];
+                    if (prop.startsWith("--")) {
+                        vars[prop] = styles.getPropertyValue(prop).trim();
+                    }
+                }
+                localStorage.setItem(`veltrix-theme-${name}`, JSON.stringify(vars));
+                console.log(`Theme saved as "${name}"`);
+            }
+
+            function load(name = "veltrix") {
+                const data = localStorage.getItem(`veltrix-theme-${name}`);
+                if (!data) {
+                    console.warn(`No theme saved under "${name}"`);
+                    return;
+                }
+                const vars = JSON.parse(data);
+                Object.entries(vars).forEach(([k, v]) => set(k, v));
+                console.log(`Loaded theme "${name}"`);
+            }
+
+            function clearSaved(name = "veltrix") {
+                localStorage.removeItem(`veltrix-theme-${name}`);
+                console.log(`Cleared saved theme "${name}"`);
+            }
+
+            function reset() {
+                if (!confirm("Reset all theme variables to browser default? This cannot be undone.")) return;
+                const styles = getComputedStyle(root);
+                for (let i = 0; i < styles.length; i++) {
+                    const prop = styles[i];
+                    if (prop.startsWith("--")) {
+                        root.style.removeProperty(prop);
+                    }
+                }
+                console.log("Theme variables reset to default.");
+            }
+
+            function stats() {
+                const styles = getComputedStyle(root);
+                let count = 0,
+                    dark = 0,
+                    icons = 0;
+                for (let i = 0; i < styles.length; i++) {
+                    const prop = styles[i];
+                    if (prop.startsWith("--")) {
+                        count++;
+                        if (prop.includes("dark")) dark++;
+                        if (prop.includes("icon")) icons++;
+                    }
+                }
+                console.log(`Total variables: ${count}`);
+                console.log(`Dark mode variables: ${dark}`);
+                console.log(`Icon variables: ${icons}`);
+            }
+
+            function help() {
+                console.log(`
+Veltrix Theme CLI ${CLI_VERSION}
+----------------------------
+theme.version()             → Show theme version
+theme.cliVersion()          → Show CLI version (BETA)
+theme.authors()             → Show theme creators
+theme.list()                → List all CSS variables
+theme.get('--primary')      → Get a variable
+theme.set('--primary', val) → Set a variable
+theme.export()              → Download current theme as .css
+theme.import(cssText)       → Import theme from CSS string
+theme.save('name')          → Save theme to localStorage
+theme.load('name')          → Load theme from localStorage
+theme.clearSaved('name')    → Delete saved theme
+theme.stats()               → Show theme variable stats
+theme.reset()               → Reset theme variables
+        `);
+            }
+
+            function version() {
+                console.log(`Veltrix Theme Version: ${THEME_VERSION}`);
+            }
+
+            function cliVersion() {
+                console.log(`CLI Tool Version: ${CLI_VERSION}`);
+            }
+
+            function authors() {
+                console.log("Theme created by QKing and Melvin");
+            }
+
+            return {
+                get,
+                set,
+                list,
+                version,
+                cliVersion,
+                authors,
+                export: exportTheme,
+                import: importTheme,
+                save,
+                load,
+                clearSaved,
+                reset,
+                stats,
+                help
+            };
+        })();
+
+        window.theme = theme;
+    </script>
+
+
+
+
+    <script src="/livewire/livewire.min.js?id=df3a17f2" data-csrf="07GTXmKC1tme7UkTSxE0HI7fAMsBsgmF1Kj5eC6r" data-update-uri="/paymenter/update" data-navigate-once="true"></script>
+</body>
+
+</html>
